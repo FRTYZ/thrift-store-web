@@ -401,7 +401,7 @@ export const formElementsStyles: Record<string, SxProps<Theme> | undefined> = {
 }
 
 // pages/Authentication/Login.tsx
-export const loginPageStyles: Record<string, SxProps<Theme> | undefined> = { 
+export const authenticationStyles: Record<string, SxProps<Theme> | undefined> = { 
     bottomBox: {
         marginTop: 8,
         display: 'flex',
