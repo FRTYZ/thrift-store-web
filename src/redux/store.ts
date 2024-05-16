@@ -2,6 +2,8 @@ import { configureStore, createSlice, Middleware } from '@reduxjs/toolkit';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
 import { MenuState, AuthUserState, CurrentCategoryState, RecentSearch, searchDrawerState } from './interface';
 
+  
+//  Creating loginSlice and defining reducer
 const loginSlice = createSlice({
   name: 'authUser',
   initialState: {} as AuthUserState,
@@ -12,12 +14,34 @@ const loginSlice = createSlice({
   },
 });
 
+const menuSlice = createSlice({
+  name: 'Menu',
+  initialState: {menuData: []} as MenuState,
+  reducers: {
+    setMenuData: (state, action) => {
+      state.menuData = action.payload;
+    },
+  },
+});
+
+const currentCategorySlice = createSlice({
+  name: 'currentCategory',
+  initialState: {currentCategory: {}} as CurrentCategoryState,
+  reducers: {
+    setCurrentCategory: (state, action) => {
+      state.currentCategoryData = action.payload;
+    },
+  },
+});
+
+
+// coinSlice creation and reducer definition
 const searchSlice = createSlice({
   name: 'search',
   initialState: { searchData: [] } as RecentSearch,
   reducers: {
     setSearchData: (state, action) => {
-      // Eğer action.payload bir dizi ise, searchData'ya ekleyelim.
+      // If action.payload is an array, add it to searchData.
       const newDataArray = Array.isArray(action.payload) ? action.payload : [action.payload];
 
       newDataArray.forEach((newData) => {
@@ -26,16 +50,17 @@ const searchSlice = createSlice({
         );
 
         if (existingDataIndex !== -1) {
-          // Eğer title aynı ise, sadece date'i güncelleyelim.
+          // If the title is the same, let's update only the date.
           state.searchData[existingDataIndex].date = newData.date;
         } else {
-          // Title'a sahip bir veri yoksa, yeni veriyi ekleyelim.
+          // If there is no data with a title, let's add the new data.
           state.searchData.push(newData);
         }
       });
     },
   },
 });
+
 const searchDrawerSlice = createSlice({
   name: 'searchDrawer',
   initialState: {} as searchDrawerState,
@@ -45,6 +70,23 @@ const searchDrawerSlice = createSlice({
     },
   },
 });
+
+export const { setLoginData } = loginSlice.actions;
+export const { setMenuData } = menuSlice.actions;
+export const { setCurrentCategory } = currentCategorySlice.actions;
+export const { setSearchData } = searchSlice.actions;
+export const { setSearchDrawer } = searchDrawerSlice.actions;
+
+// Creating rootReducer and merging all reducers
+const rootReducer = {
+    authUser: loginSlice.reducer,
+    Menu: menuSlice.reducer,
+    currentCategory: currentCategorySlice.reducer,
+    search: searchSlice.reducer,
+    searchDrawer: searchDrawerSlice.reducer,
+};
+
+// Create redux middleware
 const saveToLocalStorageMiddleware: Middleware = (store) => (next) => (action) => {
   const result = next(action);
 
@@ -56,12 +98,18 @@ const saveToLocalStorageMiddleware: Middleware = (store) => (next) => (action) =
 const store = configureStore({
   reducer: rootReducer,
   preloadedState: {
+    // Uploading state from local storage
     authUser: JSON.parse(localStorage.getItem('authUser') || '{}'),
     search: JSON.parse(localStorage.getItem('search') || '{"searchData": []}'),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(saveToLocalStorageMiddleware),
 });
+
+export function removeAllData(){
+    localStorage.clear();
+}
+
 export default store;
 
 export type RootState = ReturnType<typeof store.getState>;
