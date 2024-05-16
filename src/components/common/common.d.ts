@@ -1,3 +1,12 @@
+// Snackbar
+export type snackbarOptionsProps = {
+    message?: string,
+    type?: string
+}
+
+export type snackBarProps = {
+    snackbarOptions: snackbarOptionsProps
+}
 // Form Elements Types
 export type customTextFieldProps = {
     type: string,
