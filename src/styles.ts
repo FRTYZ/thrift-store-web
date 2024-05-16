@@ -145,7 +145,7 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
     },
 }
 
-// components/common/SearchBar.tsx
+// components/SearchBar.tsx
 export const searchStyles: Record<string, SxProps<Theme> | undefined> = {
     // Location Input
     selectLocation: {
@@ -243,5 +243,50 @@ export const searchStyles: Record<string, SxProps<Theme> | undefined> = {
         color: '#2c2c2c',
         fontSize: '14px',
         fontWeight: 700
+    }
+}
+
+// Layout/Footer.tsx
+export const footerStyles: Record<string, SxProps<Theme> | undefined> = {
+    footerMainBox: {
+        padding: '15px 10px 15px 10px',
+        borderTop: '3px solid #25d6a2',
+    },
+    footerHead: {
+        color: '#000000',
+        textDecoration: 'underline',
+        fontStyle: 'normal',
+        fontWeight: 700,
+        fontSize: '13px',
+        lineHeight: '20px',
+        textTransform: 'uppercase',
+        marginBottom: '15px'
+    },
+    footerContent: {
+        marginTop: '15px',
+        marginBottom: {lg: '35px', xs: '20px', sm: '20px'},
+        paddingLeft: '0px',
+        listStyleType: 'none'
+    },
+    footerContentText: {
+        color: '#000000',
+        fontSize: '12px',
+        cursor: 'pointer',
+        paddingBottom: '6px'
+    },
+
+    // Bottom footer
+    bottomFooterBox: {
+        marginBottom: '5px',
+        textAlign: 'center',
+    },
+    bottomFooterHeader: {
+        color: '#000000', 
+        fontSize: '14px',
+        fontWeight: 600
+    },
+    bottomFooterText: {
+        color: '#000000', 
+        fontSize: '12px',
     }
 }
