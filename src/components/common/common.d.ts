@@ -27,3 +27,15 @@ export type customPasswordFieldProps = {
     hasError?: boolean,
     handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
 }
+// AdCard
+
+export type AdCardProps = {
+    data: CardTypes[];
+    grid: number[];
+}
+
+// Favorite
+export interface FavoriteTypes {
+    id?: string,
+    hasFavorite?: boolean,
+}

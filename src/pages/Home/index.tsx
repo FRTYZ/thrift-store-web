@@ -1,5 +1,8 @@
-import React from 'react'
-import { Grid, Box, Button } from '@mui/material'
+import React, {
+  useState,
+  useEffect
+} from 'react'
+import { Grid, Box, Button, Typography } from '@mui/material'
 
 // Style and assets
 import { homePageStyles, homeBannerStyles } from '../../styles';
@@ -7,7 +10,36 @@ import { homePageStyles, homeBannerStyles } from '../../styles';
 import desktopBanner from '../../assets/home-banner.png'
 import mobileBanner from '../../assets/home-banner-mobile.png'
 
-function index() {
+// Components
+import AdCard from '../../components/common/AdCard';
+
+// helpers
+import { RequestPublic } from '../../helpers/Request';
+
+// interface
+import { CardTypes } from '../advertTypes';
+
+const Index = () => {
+  document.title = "Thrift Store - Home";
+
+  // useState elements
+  const [advertData, setAdvertData] = useState<CardTypes[]>([]);
+
+  useEffect(() => {
+    getData();
+  }, [])
+
+  const getData = async() => {
+      const url = "/advert/actual";
+
+      const advertData = await RequestPublic({
+          method: 'GET',
+          url: url
+      });
+
+      setAdvertData(advertData)
+  }
+
   return (
     <React.Fragment>
         {/* Banner  */}
@@ -25,8 +57,10 @@ function index() {
               </Button>
           </Grid>
         </Grid>
+        <Typography sx={homePageStyles.homeTitle}>Clothes</Typography>
+        <AdCard data={advertData} grid={[3,3,4,6]} />
     </React.Fragment>
   )
 }
 
-export default index
+export default Index

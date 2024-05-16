@@ -487,6 +487,78 @@ export const homePageStyles: Record<string, CSSProperties | SxProps<Theme>  | un
         marginBottom: '15px',
         fontSize: '24px',
         fontWeight: 200
+// components/AdCard.tsx
+export const adCardStyles: Record<string, SxProps<Theme> | undefined> = {
+    cardLazy: {
+        maxWidth: '345px',
+        height: '250px',
+        boxShadow: '0 1px 3px 0 rgba(0,47,52,.2), 0 1px 3px 0 rgba(0,47,52,.2)',
+        backgroundColor: '#ddd9d9'
+    },
+    card: {
+        maxWidth: '345px'
+    },
+    cardHeader: {
+        display: {
+            xl : 'flex', 
+            md: 'flex', 
+            sm: 'flex', 
+            xs: 'none'
+        }, 
     },
     
+    // Card content
+    cardMainCategoryText: {
+        fontSize: '18px',
+        lineHeight: '24px',
+        fontWeight: 500,
+        color: '#3b3b3b'
+    },
+    cardSubCategoryText: {
+        fontSize: '14px',
+        lineHeight: '20px',
+        color: '#3b3b3b'
+    },
+    cardPriceText: {
+        textAlign: {xl : 'right', md: 'right', sm: 'right', xs: 'left'},
+        fontSize: '22px',
+        lineHeight: '26px',
+        marginTop: '18px',
+        fontWeight: 500,
+        color: '#3b3b3b'
+    },
+    
+    // Card footer
+    cardLocationText: {
+        fontSize: '10px',
+        lineHeight: '20px',
+        color: '#3b3b3b',
+        textAlign: 'left',
+    },
+    cardFavoriteBox: {
+        float: 'right'
+    },
+
+    // Pagination
+    paginationBox: {
+        textAlign: 'center', 
+        marginTop: '30px' 
+    },
+    paginationButton: {
+        backgroundColor: '#25d6a2',
+        color: '#FFFFFF',
+        borderRadius: '50px',
+        border: '3px solid transparent',
+        textTransform: 'none',
+        marginRight: {xl: '20px', lg: '20px', md: '0px', sm:'0px', xs: '0px'}, 
+        marginBottom: '60px',
+        fontSize :'16',
+        fontWeight: 700,
+        '&:hover': { 
+            backgroundColor: '#FFFFFF', 
+            border: '3px solid #25d6a2', 
+            color: '#25d6a2' 
+        },
+    }
+}
 }
