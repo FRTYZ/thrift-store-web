@@ -51,6 +51,53 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
         marginRight: '20px'
     },
 
+    // Right elements for user
+    authAvatarIconButton: {
+        ml: 2
+    },
+    authAvatar: {
+        width: 32,
+        height: 32,
+        marginRight: '5px'
+    },
+
+    authMenuSellButton: {
+        color: '#000000',
+        backgroundColor: '#25d6a2 ',
+        borderRadius: 2,
+        '&:hover': { backgroundColor: '#FFFFFF', color: '#25d6a2' },
+        padding: '6px 25px'
+    },
+    authMenuSellButtonText: {
+        fontWeight: '600', 
+        textTransform: 'none'
+    },
+
+
+    // Menu popover
+    authMenuAvatar: {
+        width: '56px !important',
+        height: '56px !important',
+    },
+    authMenuAvatarText: {
+        fontSize: '20px',
+        lineHeight: '24px',
+        fontWeight: 700,
+        paddingLeft: '15px'
+    },
+    authMenuProfileButton: {
+        backgroundColor: '#25d6a2',
+        color: '#FFFFFF',
+        textTransform: 'none',
+        border: '6px solid transparent',
+        padding: '0px 25px 0px 25px',
+        fontSize: '16px',
+        marginTop:'15px',
+        marginBottom:'5px',
+        borderRadius: 15,
+        '&:hover': { bgcolor: '#FFFFFF', border: '6px solid #25d6a2', color: '#25d6a2' },
+    },
+
     // Mobile navbar
     mobileToolbar: {
         paddingRight: 0,
@@ -143,6 +190,30 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
         marginTop: '20px',
         padding: '10px'
     },
+}
+
+export const authUserMenuStyle = {
+    overflow: 'visible',
+    filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+    mt: 1.5,
+    '& .MuiAvatar-root': {
+        width: 32,
+        height: 32,
+        ml: -0.5,
+        mr: 1,
+    },
+    '&:before': {
+        content: '""',
+        display: 'block',
+        position: 'absolute',
+        top: 0,
+        right: 14,
+        width: 10,
+        height: 10,
+        bgcolor: 'background.paper',
+        transform: 'translateY(-50%) rotate(45deg)',
+        zIndex: 0,
+    }
 }
 
 // components/SearchBar.tsx
@@ -249,6 +320,7 @@ export const searchStyles: Record<string, SxProps<Theme> | undefined> = {
 // Layout/Footer.tsx
 export const footerStyles: Record<string, SxProps<Theme> | undefined> = {
     footerMainBox: {
+        marginTop: '2%',
         padding: '15px 10px 15px 10px',
         borderTop: '3px solid #25d6a2',
     },
@@ -289,6 +361,8 @@ export const footerStyles: Record<string, SxProps<Theme> | undefined> = {
         color: '#000000', 
         fontSize: '12px',
     }
+}
+
 // component/FormElements
 export const formElementsStyles: Record<string, SxProps<Theme> | undefined> = {
     // FileViewSection
