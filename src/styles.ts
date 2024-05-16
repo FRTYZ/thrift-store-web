@@ -194,6 +194,7 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
     },
 }
 
+// Layout/navbar.tsx
 export const authUserMenuStyle = {
     overflow: 'visible',
     filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
@@ -402,7 +403,9 @@ export const formElementsStyles: Record<string, SxProps<Theme> | undefined> = {
     }
 }
 
-// pages/Authentication/Login.tsx
+// pages/Authentication/SignIn.tsx ve
+// pages/Authentication/SignUp.tsx
+
 export const authenticationStyles: Record<string, SxProps<Theme> | undefined> = { 
     bottomBox: {
         marginTop: 8,
@@ -420,4 +423,70 @@ export const authenticationStyles: Record<string, SxProps<Theme> | undefined> = 
         color: 'blue', 
         cursor: 'pointer'
     }
+}
+
+// pages/Home/index.tsx
+export const homeBannerStyles: Record<string, CSSProperties | undefined > = {
+    bannerDesktop: {
+        width: '100%',
+        height: 'auto',
+    },
+    bannerMobile: {
+        width: '100%',
+        height: 'auto'
+    },
+}
+
+// pages/Home/index.tsx
+export const homePageStyles: Record<string, CSSProperties | SxProps<Theme>  | undefined > = {
+    bannerDiv: {
+        marginTop: '10px',
+        display :'block'
+    },
+    bannerDesktopBox: {
+        display: {
+            xl: 'block', 
+            lg: 'block', 
+            md: 'block', 
+            sm: 'none', 
+            xs: 'none'
+        }
+    },
+    bannerMobileBox: {
+        display: {
+            xl: 'none', 
+            lg: 'none', 
+            md: 'none', 
+            sm : 'block', 
+            xs: 'block'
+        },
+       
+    },
+    bannerContainer: {
+        position: 'absolute',
+        bottom: '14px',
+        left: '16px'
+    },
+    bannerButton: {
+        padding: {lg: '7px 20px 7px 20px', md: '7px 20px 7px 20px', sm: '5px 15px 5px 15px', xs: '2px 10px 2px 10px'},
+        backgroundColor: '#c95e7e',
+        marginRight:'20px',
+        textTransform: 'none',
+        color: '#FFFFFF',
+        fontWeight: 700,
+        borderRadius: '50px',
+        border: '3px solid #3f475f',
+        '&:hover': { 
+            backgroundColor: '#FFFFFF', 
+            border: '3px solid #3f475f', 
+            color: '#c95e7e' 
+        },
+    },
+    homeTitle: {
+        marginTop: '25px',
+        marginBottom: '15px',
+        fontSize: '24px',
+        fontWeight: 200
+    },
+    
 }
