@@ -325,4 +325,23 @@ export const formElementsStyles: Record<string, SxProps<Theme> | undefined> = {
         cursor: 'pointer'
     }
 }
+
+// pages/Authentication/Login.tsx
+export const loginPageStyles: Record<string, SxProps<Theme> | undefined> = { 
+    bottomBox: {
+        marginTop: 8,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
+    avatar: {
+        m: 1
+    },
+    formBox: {
+        mt: '50px'
+    },
+    bottomText: {
+        color: 'blue', 
+        cursor: 'pointer'
+    }
 }
