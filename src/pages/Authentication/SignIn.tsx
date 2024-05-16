@@ -8,11 +8,12 @@ import {
   Button, 
   Box,
   Typography,
+  Link
 } from '@mui/material';
 
 // Material UI İcons
 import { LockOutlined } from '@mui/icons-material';
-import { loginPageStyles } from '../../styles';
+import { authenticationStyles } from '../../styles';
 
 // Helpers
 import { HandleLoginToken, Request } from "../../helpers/Request";
@@ -39,16 +40,13 @@ export default function SignIn() {
   // useStates
   const [snackbarData, setSnackbarData] = useState<snackbarOptionsProps>({});
   const [passLogin, setPassLogin] = useState<boolean>(false);
-  const [passRegister, setPassRegister] = useState<boolean>(false)
 
   // useEffects
 
   // Login verification
   useEffect(() => {
-    console.log(11)
     if (localStorage.getItem('access_token')) {
         loginVerify();
-        console.log(222)
     }
   },[passLogin])
 
@@ -97,8 +95,6 @@ export default function SignIn() {
           url: requestUrl
       });
 
-      console.log(444)
-
       dispatch(setLoginData(getData));
       navigate('/');
   }
@@ -109,8 +105,8 @@ export default function SignIn() {
       {Object.keys(snackbarData).length > 0 && <SnackbarAlert snackbarOptions={snackbarData} />}
 
       {/* Box section */}
-        <Box sx={loginPageStyles.bottomBox}>
-            <Avatar sx={loginPageStyles.avatar}>
+        <Box sx={authenticationStyles.bottomBox}>
+            <Avatar sx={authenticationStyles.avatar}>
                 <LockOutlined />
             </Avatar>
             <Typography component="h1" variant="h5">
@@ -118,7 +114,7 @@ export default function SignIn() {
             </Typography>
 
             {/* Login Form */}
-            <Box sx={loginPageStyles.formBox}>
+            <Box sx={authenticationStyles.formBox}>
             <form
                 method='POST'
                 onSubmit={formik.handleSubmit}
@@ -153,9 +149,9 @@ export default function SignIn() {
               </form>
                 <Grid container>
                     <Grid item>
-                      <Typography sx={loginPageStyles.bottomText} onClick={() => setPassRegister(!passRegister)}>
-                           Don't have an account? Sign Up
-                      </Typography>
+                      <Link href="/sign-up" sx={authenticationStyles.bottomText}>
+                           Don't have an account? Sign In
+                      </Link>
                     </Grid>
                 </Grid>
             </Box>
