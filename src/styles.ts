@@ -5,7 +5,9 @@ import { CSSProperties } from "react";
 export const navbarStyles: Record<string, SxProps<Theme> | undefined> = { 
     appBar: {
         bgcolor: '#FFFFFF', 
-        boxShadow: 1
+        boxShadow: 1,
+        marginBottom: 1,
+        borderBottom: '1px solid #25d6a2'
     },
     navContainer: {
         marginTop: '3px',
@@ -33,7 +35,7 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
         fontSize: '14px',
         color: '#3b3b3b',
         fontWeight: '600',
-        borderRight: '1px solid #e73e61',
+        borderRight: '1px solid #25d6a2',
         width: 'max-content',
         textTransform: 'none',
         textDecoration: 'none',

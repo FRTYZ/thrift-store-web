@@ -79,7 +79,7 @@ const Footer = () => {
     }
     return (
         <React.Fragment>
-            <Box sx={footerStyles.footerMainBox}>
+            <Box sx={footerStyles.footerMainBox} component="footer">
                 <Container>
                     <Grid container>
                         <Grid item xl={3} md={3} sm={3} xs={12}>
