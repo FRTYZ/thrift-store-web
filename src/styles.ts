@@ -289,4 +289,40 @@ export const footerStyles: Record<string, SxProps<Theme> | undefined> = {
         color: '#000000', 
         fontSize: '12px',
     }
+// component/FormElements
+export const formElementsStyles: Record<string, SxProps<Theme> | undefined> = {
+    // FileViewSection
+    imageBox: {
+        position: 'relative', 
+        margin: '20px 20px 10px 0px' ,
+        display: 'inline-block', 
+        border: '2px solid #7c4b00'
+    },
+    closeIconBox: {
+        position: 'absolute', 
+        top: 0, 
+        right: 0, 
+        padding: '5px', 
+        display: 'flex', 
+        flexDirection: 'column'
+    },
+    closeIconButton : {
+        border: '2px solid red',
+        borderRadius: 3, 
+        '&:hover': {
+            backgroundColor :'#FFFFFF'
+        },
+    },
+    closeIcon: {
+        fontSize: '16px',
+        color: 'red' 
+    },
+    processBox: {
+        display :'grid'
+    },
+    dowloadProcessText: {
+        color: 'blue', 
+        cursor: 'pointer'
+    }
+}
 }
