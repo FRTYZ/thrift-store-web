@@ -33,7 +33,7 @@ const Layout = (props: LayoutProps) => {
       if(loginData) {
           setLogin(true)
       }
-  }, [])
+  }, [loginData])
 
 
   return (
