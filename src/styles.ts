@@ -400,7 +400,11 @@ export const formElementsStyles: Record<string, SxProps<Theme> | undefined> = {
     dowloadProcessText: {
         color: 'blue', 
         cursor: 'pointer'
-    }
+    },
+    fileInputValidationText: {
+        color : '#ff3f55', 
+        fontSize: '12px',
+    },
 }
 
 // pages/Authentication/SignIn.tsx ve

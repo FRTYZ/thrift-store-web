@@ -7,12 +7,14 @@ export type snackbarOptionsProps = {
 export type snackBarProps = {
     snackbarOptions: snackbarOptionsProps
 }
+
+
 // Form Elements Types
 export type customTextFieldProps = {
     type: string,
     label: string,
     name: string,
-    value: string,
+    value?: string,
     placeholder: string,
     hasError?: boolean,
     handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
@@ -27,6 +29,53 @@ export type customPasswordFieldProps = {
     hasError?: boolean,
     handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
 }
+
+export type SelectFieldProps = {
+    label?: string, 
+    name?: string, 
+    value?: string, 
+    selectItems: {
+        id?: string,
+        value?: string
+    }[], 
+    hasError?: boolean, 
+    handleFormik?: any, 
+    [key: string]: any
+}
+
+export type FileViewSectionProps = {
+    file: any[],
+    type: string,
+    removeFunc: (param: number) => void,
+    isOld: boolean,
+}
+
+
+export type FileUploadInputProps = {
+    label: string,
+    name: string,
+    oldFileName: string,
+    type: string,
+    setAlert: React.Dispatch<React.SetStateAction<snackbarOptionsProps>>,
+    handleFormik: any,
+    [key: string]: any
+}
+
+export type FileProps = {
+    url?: string,
+    path?: string,
+    mimeType?: string
+}
+
+export type OldFileInputProps = {
+    name: string,
+    value: FileProps[],
+    type: string,
+    handleFormik: any,
+}
+
+
+
 // AdCard
 
 export type AdCardProps = {
