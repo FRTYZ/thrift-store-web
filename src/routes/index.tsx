@@ -10,6 +10,7 @@ import SignUp from "../pages/Authentication/SignUp";
 // Adverts
 import Sell from "../pages/Adverts/Sell";
 import SellCategory from '../pages/Adverts/SellCategory';
+import AdvertEdit from "../pages/Adverts/Edit";
 
 // Profile
 import MyAdsView from "../pages/Profile/MyAdsList";
@@ -25,6 +26,7 @@ import MyFavoriteView from "../pages/Profile/MyFavoriteList";
 const authProtectedRoutes = [
     { path: "/post", component: <SellCategory /> },
     { path: "/post/attributes", component: <Sell /> },
+    { path: "/post/edit/:advertId", component: <AdvertEdit /> },
     { path: "/profile/myads", component: <MyAdsView /> },
     { path: "/profile/myfavorite", component: <MyFavoriteView /> },
 ]

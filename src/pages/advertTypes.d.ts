@@ -69,3 +69,22 @@ export interface CountiesProps {
     value?: string,
     id?: string
 }
+
+export interface EditAdvertImages {
+    image_id?:number,
+    is_cover_image?:boolean,
+    path?:string
+}
+
+export interface EditAdvertDetail {
+    category_name?: string,
+    city_id?: number,
+    county_id?: number,
+    description?: string,
+    status_id?: string,
+    id?: string,
+    images?: EditAdvertImages[],
+    price?:string,
+    sub_category_name?:string,
+    title?:string
+}
