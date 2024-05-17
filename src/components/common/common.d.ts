@@ -46,7 +46,7 @@ export type SelectFieldProps = {
 export type FileViewSectionProps = {
     file: any[],
     type: string,
-    removeFunc: (param: number) => void,
+    removeFunc: (param: number, param: number) => void,
     isOld: boolean,
 }
 
@@ -64,14 +64,17 @@ export type FileUploadInputProps = {
 export type FileProps = {
     url?: string,
     path?: string,
-    mimeType?: string
+    image_id?: number,
+    is_cover_image?: boolean
 }
 
 export type OldFileInputProps = {
     name: string,
-    value: FileProps[],
+    value: any[],
     type: string,
     handleFormik: any,
+    setDeleteState: any,
+    currentValue: any[]
 }
 
 

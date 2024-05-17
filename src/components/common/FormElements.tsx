@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, version } from 'react';
 
 // Material UI elements
 import { 
@@ -218,19 +218,6 @@ export const FileUploadInput: React.FC<FileUploadInputProps> = ({label, name, ol
 }
 
 export const FileViewSection: React.FC<FileViewSectionProps> = ({file, type, removeFunc, isOld}) => {
-    const EndPoint = import.meta.env.VITE_ENDPOINT;
-
-    const onButtonClick = (url: string) => {
-        const pdfUrl = "Sample.pdf";
-        const link = document.createElement("a");
-
-        link.href = pdfUrl;
-        link.download = url; // specify the filename
-        
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
 
     return (
         <>
@@ -243,7 +230,7 @@ export const FileViewSection: React.FC<FileViewSectionProps> = ({file, type, rem
                 {isOld ? (
                     (type == 'image' ? (
                         <img 
-                            src={EndPoint + item?.url}
+                            src={item?.url}
                             style={{ objectFit: 'cover' }} 
                             width={100} 
                             height={100} 
@@ -267,34 +254,48 @@ export const FileViewSection: React.FC<FileViewSectionProps> = ({file, type, rem
                 )}             
                     <Box sx={formElementsStyles.closeIconBox}>
                         <IconButton 
-                            aria-label="remove to todo" 
-                            onClick={() => removeFunc(key)}
+                            aria-label="remove to file" 
+                            onClick={() => removeFunc(key, item?.image_id)}
                             sx={formElementsStyles.closeIconButton}
                         >
                             <Close sx={formElementsStyles.closeIcon} />
                         </IconButton>
+                        {key == 0 && (
+                            <Typography variant="body2" sx={formElementsStyles.fileInputImageText}>
+                                COVER
+                            </Typography>
+                        )}
                     </Box>
             </Box>
-                {isOld && type !== 'image' && (
-                    <Box sx={formElementsStyles.processBox}>
-                        <Typography
-                            href={EndPoint + item.url}
-                            component="a"
-                            target='_blank'
-                        >
-                            Görüntüle
-                        </Typography>
-                        
-                        <Typography
-                            onClick={() => onButtonClick(EndPoint + item.url)}
-                            sx={formElementsStyles.dowloadProcessText}
-                        >
-                            İndir
-                        </Typography>
-                    </Box>
-                )}
             </>
         ))}
+        </>
+    )
+}
+
+export const OldFileInput: React.FC<OldFileInputProps> = ({name, value, type, handleFormik, setDeleteState, currentValue}) => {
+
+    const removeSelectFile = (imageKey: number, imageId: number) => {
+        const newList = value?.filter((veri, key) => key !== imageKey && veri);
+        handleFormik.setFieldValue(name, newList.length == 0 ? undefined : newList);
+
+        setDeleteState((prevDeletedImages: any) => [
+            ...prevDeletedImages,
+            currentValue.find((item) => item.image_id == imageId),
+        ])
+
+    }
+
+    return (
+        <>
+        {value.length > 0 && (
+            <FileViewSection 
+                file={value}
+                type={type}
+                removeFunc={removeSelectFile}
+                isOld={true}
+            />
+        )}
         </>
     )
 }

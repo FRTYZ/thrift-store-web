@@ -397,14 +397,22 @@ export const formElementsStyles: Record<string, SxProps<Theme> | undefined> = {
     processBox: {
         display :'grid'
     },
-    dowloadProcessText: {
-        color: 'blue', 
-        cursor: 'pointer'
-    },
     fileInputValidationText: {
         color : '#ff3f55', 
         fontSize: '12px',
     },
+    fileInputImageText: {
+        position: 'absolute', 
+        top: '68px',
+        right:'22px',
+        backgroundColor: 'red',
+        color: 'white', 
+        padding: '3px',
+        borderRadius: '5px', 
+        margin: '5px',
+        fontSize: '12px',
+        fontWeight: 300
+    }
 }
 
 // pages/Authentication/SignIn.tsx ve
