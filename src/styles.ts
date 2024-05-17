@@ -616,3 +616,71 @@ export const homePostAdvertStyles: Record<string, SxProps<Theme>  | undefined > 
         color: '#2c2c2c' 
     }
 }
+
+// pages/Post/attributes and pages/Post/Edit
+export const postAdvertStyles: Record<string, SxProps<Theme>  | undefined > = {
+    toptTile: {
+        fontSize: '24px', 
+        fontWeight: 700, 
+        textTransform: 'uppercase', 
+        marginTop: '25px', 
+        textAlign: 'center' 
+    },
+    mainBox: {
+        border: '1px solid #e0e0e0', 
+        borderRadius: 2 
+    },
+    subTitle: {
+        fontSize: '16px', 
+        fontWeight: 700, 
+        lineHeight: 1.5, 
+        margin: '25px 15px 15px 25px'
+    },
+
+    // Breadcrumb
+    breadCrumbBox: {
+        marginLeft: '25px', 
+        marginRight: '25px', 
+        paddingBottom: '25px', 
+        display: 'inline-flex', 
+    },
+    breadCrumbText: {
+        fontSize: '14px',
+        color: '#00000099' 
+    },
+    breadCrumbChangeText: {
+        color: '#ff3f55',
+        fontSize: '14px', 
+        marginLeft: '20px', 
+        fontWeight: 700, 
+        '&.hover': { 
+            borderBottom: 'none' 
+        }
+    },
+    // Inputs
+    inputBox: {
+        padding: '25px',
+        width: {xl: '50%', md: '50%', sm: '50%', xs: 'auto'}
+    },
+    inputTopTitles: {
+        fontSize: '16px', 
+        fontWeight: 700, 
+        lineHeight: 1.5, 
+        margin: '25px 15px 15px 25px' 
+    },
+   
+    sendButtonBox: {
+        textAlign: 'center', 
+        marginTop: '30px', 
+        marginBottom: '30px'
+    },
+    sendButton: {
+        backgroundColor: '#25d6a2',
+        color: '#FFFFFF',
+        textTransform: 'none',
+        border: '6px solid transparent',
+        fontSize: '16px',
+        borderRadius: 15,
+        '&:hover': { bgcolor: '#FFFFFF', border: '6px solid #25d6a2', color: '#25d6a2' },
+    }
+}

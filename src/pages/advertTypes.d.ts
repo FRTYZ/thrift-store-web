@@ -31,6 +31,11 @@ export interface TabPanelProps {
     value: number;
 }
 
+export interface StatusProps {
+    id?: string,
+    value?: string 
+}
+
 export interface PostCategory {
     category_id: string
     category_name: string,
@@ -42,4 +47,15 @@ export interface PostCategory {
         sub_category_name: string,
         sub_category_icon?: string
     }[]
+}
+
+export interface CitiesProps {
+    value?: string,
+    id?: string,
+    plateno?: string
+}
+
+export interface CountiesProps {
+    value?: string,
+    id?: string
 }

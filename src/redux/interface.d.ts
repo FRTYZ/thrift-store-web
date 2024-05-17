@@ -3,13 +3,14 @@
 export interface SubCategory {
     main_category_id: number,
     sub_category_id: number,
-    sub_category_name: string
+    sub_category_name: string,
+    sub_category_icon?: string
 }
 
 export interface Menu {
     category_id: string
     category_name: string,
-    icon: string,
+    color: string,
     sub_category: SubCategory[]
 }
 
