@@ -75,7 +75,6 @@ export type OldFileInputProps = {
 }
 
 
-
 // AdCard
 
 export type AdCardProps = {
@@ -87,4 +86,9 @@ export type AdCardProps = {
 export interface FavoriteTypes {
     id?: string,
     hasFavorite?: boolean,
+}
+
+// NoResult
+export type NoResultProps = {
+    page: string;
 }

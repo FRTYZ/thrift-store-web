@@ -9,7 +9,11 @@ import SignUp from "../pages/Authentication/SignUp";
 
 // Adverts
 import Sell from "../pages/Adverts/Sell";
-import SellCategory from '../pages/Adverts/SellCategory'
+import SellCategory from '../pages/Adverts/SellCategory';
+
+// Profile
+import MyAdsView from "../pages/Profile/MyAdsList";
+import MyFavoriteView from "../pages/Profile/MyFavoriteList";
 
  const publicRoutes = [
     { path: "/", component: <Home /> },
@@ -21,6 +25,8 @@ import SellCategory from '../pages/Adverts/SellCategory'
 const authProtectedRoutes = [
     { path: "/post", component: <SellCategory /> },
     { path: "/post/attributes", component: <Sell /> },
+    { path: "/profile/myads", component: <MyAdsView /> },
+    { path: "/profile/myfavorite", component: <MyFavoriteView /> },
 ]
 
 export { publicRoutes, authProtectedRoutes };

@@ -49,6 +49,16 @@ export interface PostCategory {
     }[]
 }
 
+export interface MyAdProp {
+    id?: string,
+    is_cover_image?: string,
+    is_visible?: boolean,
+    is_sell?:boolean,
+    status_id?: string,
+    likes?: string,
+    price?: string,
+    title?: string
+}
 export interface CitiesProps {
     value?: string,
     id?: string,
