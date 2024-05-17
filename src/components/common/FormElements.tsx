@@ -155,7 +155,6 @@ export const FileUploadInput: React.FC<FileUploadInputProps> = ({label, name, ol
             const newList = changeList();
 
             handleFormik.setFieldValue(name, newList);
-            handleFormik.setFieldValue(oldFileName, undefined);
 
             setFile(newList);
             
@@ -260,7 +259,7 @@ export const FileViewSection: React.FC<FileViewSectionProps> = ({file, type, rem
                         >
                             <Close sx={formElementsStyles.closeIcon} />
                         </IconButton>
-                        {key == 0 && (
+                        {key == 0 && isOld && (
                             <Typography variant="body2" sx={formElementsStyles.fileInputImageText}>
                                 COVER
                             </Typography>
