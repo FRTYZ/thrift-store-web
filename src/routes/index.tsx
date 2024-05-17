@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import SignIn from "../pages/Authentication/SignIn";
 import SignUp from "../pages/Authentication/SignUp";
 
+import SellCategory from '../pages/Adverts/SellCategory'
  const publicRoutes = [
     { path: "/", component: <Home /> },
     { path: "/", exact: true, component: <Navigate to="/" />},
@@ -14,4 +15,8 @@ import SignUp from "../pages/Authentication/SignUp";
     { path: "/sign-up", component: <SignUp />},
 ]; 
 
-export { publicRoutes };
+const authProtectedRoutes = [
+    { path: "/post", component: <SellCategory /> },
+]
+
+export { publicRoutes, authProtectedRoutes };

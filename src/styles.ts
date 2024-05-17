@@ -562,3 +562,53 @@ export const adCardStyles: Record<string, SxProps<Theme> | undefined> = {
     }
 }
 }
+// pages/Adverts/SellCategory.tsx
+export const homePostAdvertStyles: Record<string, SxProps<Theme>  | undefined > = {
+    topTitle: {
+        fontSize: '24px', 
+        fontWeight: 700, 
+        textTransform: 'uppercase', 
+        marginTop: '15px', 
+        marginBottom: '15px', 
+        textAlign: 'center'
+    },
+    categoryMainBox: {
+        border: '1px solid #e0e0e0', 
+        borderRadius: '8' 
+    },
+    categoryColumnTitle: {
+        fontSize: '16px', 
+        fontWeight: 700, 
+        lineHeight: 1.5, 
+        margin: '25px 15px 15px 30px' 
+    },
+    // Left category column
+    leftCategoryGrid: {
+        marginBottom: '20px' 
+    },
+    leftCategoryTabs: {
+        borderRight: 1, 
+        borderColor: 'divider'
+    },
+    leftCategoryTab: {
+        justifyContent: 'flex-start',
+        minHeight: '54px',
+        maxWidth: '100%',
+    },
+
+    // right category column
+    rightCategoryListItem: {
+        padding: 0,
+        display: 'contents'
+    },
+    rightCategoryListItemButton: {
+        padding: '0', 
+        border: '1px solid #e0e0e0',
+        maxWidth: '100%', 
+        minHeight: '54px'
+    },
+    rightCategoryListItemText: {
+        paddingLeft: '20px', 
+        color: '#2c2c2c' 
+    }
+}

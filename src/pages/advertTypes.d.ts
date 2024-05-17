@@ -25,3 +25,21 @@ export interface CardTypes {
     },
 
 }
+export interface TabPanelProps {
+    children?: React.ReactNode;
+    index: number;
+    value: number;
+}
+
+export interface PostCategory {
+    category_id: string
+    category_name: string,
+    color?: string,
+    key_id: number,
+    sub_category: {
+        main_category_id: number,
+        sub_category_id: number,
+        sub_category_name: string,
+        sub_category_icon?: string
+    }[]
+}

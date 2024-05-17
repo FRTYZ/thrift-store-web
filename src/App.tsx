@@ -5,7 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from './Layout';
 
 // Import Routes all
-import { publicRoutes } from "./routes";
+import { publicRoutes, authProtectedRoutes } from "./routes";
 import AuthCheck from './routes/route';
 
 function App() {
@@ -17,6 +17,18 @@ function App() {
           <Route
             path={route.path}
             element={<Layout>{route.component}</Layout>}
+            key={idx}
+          />
+        ))}
+
+        {authProtectedRoutes.map((route, idx) => (
+          <Route
+            path={route.path}
+            element={
+              <AuthCheck>
+                <Layout>{route.component}</Layout>
+              </AuthCheck>
+            }
             key={idx}
           />
         ))}
