@@ -28,16 +28,13 @@ import {
 import { SnackbarAlert } from '../../components/common/SnackbarAlert';
 
 // Redux
-import store, { 
-    setLoginData, 
-    useAppDispatch ,
-    } from '../../redux/store';
+import store from '../../redux/store';
 
 // Other
 import { useFormik } from 'formik';
 
 // interfaces
-import { LoginData, Category } from '../../redux/interface';
+import { Category } from '../../redux/interface';
 import { CitiesProps, CountiesProps, StatusProps } from '../advertTypes';
 import { PostAdvertTypes } from '../formTypes';
 import { snackbarOptionsProps } from '../../components/common/common';
@@ -47,11 +44,7 @@ function Sell() {
     // React router elements
     const navigate = useNavigate();
 
-    // Redux elements
-    const dispatch = useAppDispatch();
-
     // Redux
-    const loginData = store.getState().authUser?.loginData;
     const currentCategoryData = store.getState().currentCategory?.currentCategoryData;
 
     // useState elements
@@ -61,18 +54,7 @@ function Sell() {
     const [counties, setCounties] = useState<CountiesProps[]>([]);
     const [snackbarData, setSnackbarData] = useState<snackbarOptionsProps>({});
 
-    const [userData, setUserData] = useState<LoginData>({});
-
      // useEffect elements
-
-    /*
-        Gets user data in redux state
-    */
-    useEffect(() => {
-        if(loginData){
-            setUserData(loginData)
-        }
-    },[loginData])
 
      /*
         gets selected category from redux
@@ -109,7 +91,6 @@ function Sell() {
         onSubmit: async (values) => {
             const {title, description, price, photo, city_id, county_id, fullname, how_status} = values;
             
-            console.log(values)
             if(title == '' || description == '' || price == '' || county_id == '' || fullname == '' || how_status == '' || photo!.length == 0){
                 setSnackbarData({
                     type: 'error',
@@ -148,22 +129,6 @@ function Sell() {
                         message: 'Completing the process'
                     })
 
-                    if (userData.fullname != fullname) {
-                        const formdata: FormData = new FormData();
-                        formdata.append("fullname", fullname!);
-                        
-                        const url = '/account/session' 
-                        await Request({
-                            method: 'PUT',
-                            url: url ,
-                            formData: formdata 
-                        });
-    
-                        const newLoginData = {
-                            fullname: fullname,
-                        }
-                        dispatch(setLoginData(newLoginData));
-                    }
                     navigate('/');
                 }
                 else {
