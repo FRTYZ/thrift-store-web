@@ -49,7 +49,7 @@ const Footer = () => {
     useEffect(() => {
         if(menuData?.length !== 0) {
             const firstColumnCategory = menuData?.slice(0, 4);
-            const secondColumnCategory = menuData?.slice(7, 10);
+            const secondColumnCategory = menuData?.slice(1, 4);
 
             setFirstFooterCategory(firstColumnCategory!);
             setSecondFooterCategory(secondColumnCategory!);

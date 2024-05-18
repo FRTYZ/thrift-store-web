@@ -396,11 +396,11 @@ export const subNavbarStyles: Record<string, SxProps<Theme> | undefined> = {
 export const footerStyles: Record<string, SxProps<Theme> | undefined> = {
     footerMainBox: {
         marginTop: '2%',
-        padding: '15px 10px 15px 10px',
-        borderTop: '3px solid #25d6a2',
+        padding: '40px 10px 15px 10px',
+        backgroundColor: '#25d6a2',
     },
     footerHead: {
-        color: '#000000',
+        color: '#fff',
         textDecoration: 'underline',
         fontStyle: 'normal',
         fontWeight: 700,
@@ -416,7 +416,7 @@ export const footerStyles: Record<string, SxProps<Theme> | undefined> = {
         listStyleType: 'none'
     },
     footerContentText: {
-        color: '#000000',
+        color: '#fff',
         fontSize: '12px',
         cursor: 'pointer',
         paddingBottom: '6px'
