@@ -121,7 +121,7 @@ function Sell() {
                         message: 'An error occurred'
                     })
                 }
-            } 
+            }
         }
     })
 
@@ -296,7 +296,6 @@ function Sell() {
                                         name='photo'
                                         oldFileName='oldPhotos'
                                         type="image"
-                                        setAlert={setSnackbarData}
                                         handleFormik={formik}
                                         multiple
                                         accept='image/png, image/jpeg'

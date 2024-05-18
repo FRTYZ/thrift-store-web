@@ -308,7 +308,6 @@ function Sell() {
                                         name='photo'
                                         oldFileName=''
                                         type="image"
-                                        setAlert={setSnackbarData}
                                         handleFormik={formik}
                                         multiple
                                         accept='image/png, image/jpeg'
