@@ -11,6 +11,7 @@ import SignUp from "../pages/Authentication/SignUp";
 import Sell from "../pages/Adverts/Sell";
 import SellCategory from '../pages/Adverts/SellCategory';
 import AdvertEdit from "../pages/Adverts/Edit";
+import AdvertDetail from "../pages/Adverts/Detail";
 
 // Profile
 import MyAdsView from "../pages/Profile/MyAdsList";
@@ -19,6 +20,7 @@ import MyFavoriteView from "../pages/Profile/MyFavoriteList";
  const publicRoutes = [
     { path: "/", component: <Home /> },
     { path: "/", exact: true, component: <Navigate to="/" />},
+    { path: "/item/:title/:itemId", component: <AdvertDetail /> },
     { path: "/sign-in", component: <SignIn />},
     { path: "/sign-up", component: <SignUp />},
 ]; 

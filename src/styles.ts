@@ -914,4 +914,144 @@ export const advertDetailCarouselStyles = {
     }
 }
 
+// pages/Adverts/Detail.tsx
+export const advertDetailStyles: Record<string, SxProps<Theme> | undefined> = {
+    mainBox: {
+        paddingTop: '20px', 
+        paddingBottom: '20px'
+    },
+                        // Left Column = Carousel
+    leftColumnGrid: {
+        width: { 
+            xl: '96%', 
+            lg: '96%', 
+            md: '100%', 
+            sm: '100%', 
+            xs: '100%' 
+        },
+        backgroundColor: '#FFFFFF',
+        marginBottom: { md: '10px', sm: '20px', xs: '20px' }
+    },
+
+     // Carousel
+    carouselBox: {
+        backgroundColor: '#616161', 
+        maxHeight: '400px', 
+        width: 'auto', 
+        height: '100%',
+        overflow: 'hidden',
+        textAlign:'center'
+    },
+
+                    // Right Column: Price, Seller, Location cards
+    rightColumnMainBox: {
+        backgroundColor: '#FFFFFF',
+    },
+    rightColumnCardBox: {
+        borderRadius: 0,
+        borderBottom: '1px solid #ebebeb',
+        paddingLeft: '10px',
+        p: '15px 15px 15px 15px'
+    },
+    rightColumnInfoBox: {
+        padding: '12px 5px 4px 4px'
+    },
+    rightColumnInfoTitle: {
+        fontSize: '28px', 
+        lineHeight: '30px', 
+        fontWeight: 400, 
+        color: '#2c2c2c'
+    },
+    rightColumnInfoText: {
+        fontSize: '22px',
+        lineHeight: '30px', 
+        color: '#949494',
+        marginTop: '10px'
+    },
+    rightColumnInfoIconsBox: {
+        textAlign: 'right',
+        height: '100%',
+        borderLeft: '1px solid #ebebeb',
+        paddingRight: '30px',
+    },
+
+    // Price card
+    rightColumnPriceBox: {
+        padding: '22px 5px 22px 4px'
+    },
+    rightColumnPriceText: {
+        fontSize: '40px',
+        lineHeight: '40px',
+        fontWeight: 700
+    },
+    rightColumnBuyButtonBox: {
+        float: 'right',
+        padding: '10px 5px 2px 4px'
+    },
+    rightBuyButton: {
+        color: '#FFFFFF',
+        backgroundColor: '#25d6a2 ',
+        borderRadius: '3px',
+        '&:hover': { backgroundColor: '#FFFFFF', color: '#25d6a2' },
+        padding: '20px 5px',
+        margin: '0 0 0 6px',
+        width: '140px'
+    },
+    rightBuyButtonText: {
+        fontWeight: '500', 
+        textTransform: 'none',
+        fontSize: '18px'
+    },
+
+    // Seller card
+    rightColumnSellerAvatar: {
+        width: '68px', 
+        height: '68px',
+        cursor: 'pointer'
+    },
+    rightColumnSellerFullname: {
+        fontSize: '20px', 
+        lineHeight: '20px', 
+        fontWeight: 700, 
+        color: '#2c2c2c', 
+        marginTop: '20px',
+        cursor: 'pointer'
+    },
+    rightColumnSellerIconGrid: {
+        textAlign: 'right', 
+        marginTop: '10px' 
+    },
+    rightColumnDescription: {
+        fontSize: '16px',
+        lineHeight: '20px',
+        fontWeight: 400,
+        color: '#3b3b3b',
+        margin: '25px 10px 10px 0px'
+    },
+
+
+    rightColumnDetailText: {
+        fontSize: '20px', 
+        lineHeight: '20px', 
+        fontWeight: 700, 
+        color: '#2c2c2c', 
+        marginTop: '10px', 
+        marginBottom: '10px'
+    },
+
+    // Advert info area
+    rightColumnAdvertInfoText: {
+        fontSize: '14px', 
+        marginTop: '10px', 
+        color: '#2c2c2c', 
+        fontWeight: 'bolder'
+    },
+    rightColumnAdvertComplaint: {
+        fontSize: '12px', 
+        color: '#ff3f55', 
+        fontWeight: 700, 
+        textTransform: 'uppercase', 
+        marginTop: '10px',
+        textAlign: 'right'
+    }
 }

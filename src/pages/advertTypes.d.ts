@@ -23,8 +23,45 @@ export interface CardTypes {
         width?: number,
         height?: number
     },
-
 }
+
+export interface DetailCardPhotoTypes {
+    height?: string,
+    images_id?: string,
+    is_cover_image?: boolean,
+    path?: string,
+    url?: string
+    width?: string
+}
+
+export interface DetailCardTypes {
+    city?: string,
+    county?: string,
+    city_id?:string,
+    county_id?:string,
+    date?: string,
+    description?: string,
+    display_name?: string,
+    display_type?: string,
+    fullname?: string
+    how_status?: string,
+    id?: string
+    price?: string
+    title?: string
+    user_image?: {
+        url: string,
+        path: string
+    },
+    user_type?: string,
+    userid?: number,
+    has_favorite?: boolean,
+    main_category_id?: string,
+    sub_category_id?: string,
+    main_category?: string,
+    sub_category?: string,
+    photo?: DetailCardTypes
+}
+
 export interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
