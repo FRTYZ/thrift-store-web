@@ -166,7 +166,7 @@ const SearchBar: React.FC<searchProps> = ({ dimension }) => {
                             >
                                 <MenuItem value="0"> Istanbul, Türkiye </MenuItem>
                                 {counties.length > 0 && counties.map((item, key) => (
-                                    <MenuItem value={item.id} key={key}>{item.county}</MenuItem>
+                                    <MenuItem value={item.id} key={key}>{item.value}</MenuItem>
                                 ))}
                             </Select>
                         </FormControl>

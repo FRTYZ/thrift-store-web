@@ -573,7 +573,134 @@ export const adCardStyles: Record<string, SxProps<Theme> | undefined> = {
         },
     }
 }
+
+// pages/Adverts/search.tsx
+export const advertSearchStyles: Record<string, SxProps<Theme> | undefined> = {
+                            // Left Filter Columns
+    leftFilterGrid: {
+        marginTop: '30px',
+        paddingRight: '22px'
+    },
+
+    // Title
+    leftFilterTitleLink: {
+        fontSize: '12px', 
+        fontWeight: 400,
+        color: '#424242'
+    },
+    leftFilterTitle: {
+        fontSize: '24px', 
+        fontWeight: 600
+    },
+    leftFilterAccording: {
+        boxShadow: 'none'
+    },
+    leftFilterAccordingSummary: {
+        padding:0
+    },
+    leftFilterCardsTitle: {
+        flexShrink: 0, 
+        fontWeight: 700, 
+        textTransform: 'uppercase'
+    },
+    leftFilterAccordingTitleBox: {
+        display :'flex', 
+        marginTop: '10px'
+    },
+    leftFilterAccordingTitle: {
+        fontSize: '14px', 
+        fontWeight: 700, 
+        color: '#2c2c2c'
+    },
+    leftFilterAccordingContentBox: {
+        display :'flex', 
+        marginTop: '10px'
+    },
+    leftFilterAccordingContentActiveBox: {
+        display :'flex',
+        marginTop: '10px',
+        fontWeight: 700, 
+        backgroundColor: '#f5f5f5',
+        color: '#2c2c2c',
+    },
+    leftFilterAccordingMainContent: {
+        fontSize: '14px', 
+        fontWeight: 700, 
+        color: '#2c2c2c',
+        marginLeft: '5px', 
+    },
+    leftFilterAccordingSubContent: {
+        fontSize: '14px', 
+        fontWeight: 500, 
+        color: '#616161', 
+        paddingLeft: '30px' , 
+        marginBottom: '10px',
+        cursor: 'pointer'
+    },
+    leftFilterAccordingActiveSubContent: {
+        color: '#2c2c2c', 
+        fontSize: '14px', 
+        fontWeight: 700, 
+        paddingLeft: '30px' , 
+        marginBottom: '10px',
+        cursor: 'pointer',
+        backgroundColor: '#f5f5f5'
+    },
+
+    // Filter Price 
+    textBetweenPriceFilter: {
+        textAlign: 'center', 
+        marginTop: '10px'
+    },
+    priceFilterButton: {
+        color: '#FFFFFF',
+        backgroundColor: '#ff3f55',
+        borderRadius: 5,
+        border: '3px solid #ff3f55',
+        textTransform: 'none',
+        padding: 0,
+        '&:hover': { 
+            backgroundColor: '#FFFFFF', 
+            color: '#ff3f55', 
+            border: '3px solid #ff3f55' 
+        },
+    },
+
+                             // Top Right Filter Columns
+    rightFilterGrid: {
+        marginTop: '15%',
+        marginBottom: '10px',
+        borderBottom: '1px solid #0000001f'
+    },
+    rightFilterInfoBox: {
+        display :'flex',
+        marginTop: '10px'
+    },
+    rightFilterInfo: {
+        marginBottom: '15px',
+        fontSize: '18px',
+        fontWeight: 200,
+    },
+    rightFilterCount: {
+        borderRadius: 2,
+        backgroundColor: '#99b7e5',
+        color: '#000000',
+        fontWeight: 600,
+        fontSize: '12px',
+        marginTop: '7px',
+    },
+    rightSortingFilterText: {
+        fontSize: '14px', 
+        fontWeight: 600, 
+        marginTop: 1.8, 
+        textTransform: 'uppercase',
+        textAlign: {xl : 'right', lg: 'right', md: 'right', sm: 'left', xs: 'left' }
+    },
+    rightSortingFilter: {
+        textAlign: 'left'
+    }
 }
+
 // pages/Adverts/SellCategory.tsx
 export const homePostAdvertStyles: Record<string, SxProps<Theme>  | undefined > = {
     topTitle: {
@@ -692,7 +819,6 @@ export const postAdvertStyles: Record<string, SxProps<Theme>  | undefined > = {
         '&:hover': { bgcolor: '#FFFFFF', border: '6px solid #25d6a2', color: '#25d6a2' },
     }
 }
-
 
 // pages/Profile/MyAdsView.tsx
 export const adViewStyles: Record<string, SxProps<Theme>  | undefined > = {

@@ -114,7 +114,7 @@ export interface CitiesProps {
 
 export interface CountiesProps {
     value?: string,
-    id?: string
+    id?: string,
 }
 
 export interface EditAdvertImages {

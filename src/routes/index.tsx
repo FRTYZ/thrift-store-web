@@ -12,6 +12,7 @@ import Sell from "../pages/Adverts/Sell";
 import SellCategory from '../pages/Adverts/SellCategory';
 import AdvertEdit from "../pages/Adverts/Edit";
 import AdvertDetail from "../pages/Adverts/Detail";
+import Search from "../pages/Adverts/Search";
 
 // Profile
 import MyAdsView from "../pages/Profile/MyAdsList";
@@ -29,6 +30,7 @@ import Privacy from "../pages/Settings/Privacy";
     { path: "/sign-in", component: <SignIn />},
     { path: "/sign-up", component: <SignUp />},
     { path: "/profile/:userId", component: <ProfileView /> },
+    { path: "/search", component: <Search /> },
 ]; 
 
 const authProtectedRoutes = [
