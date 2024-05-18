@@ -19,7 +19,7 @@ import { NoResultProps } from './common'
 
 const NoResult: React.FC<NoResultProps> = ({ page }) => {
   return (
-    <Container>
+    <React.Fragment>
         {page == 'search' && (
         <Box sx={noResultStyles.searchBox}>
             <Typography sx={noResultStyles.searchTitle}>No ads found</Typography>
@@ -60,7 +60,7 @@ const NoResult: React.FC<NoResultProps> = ({ page }) => {
              
         </Box>
         )}
-    </Container>
+    </React.Fragment>
   )
 }
 

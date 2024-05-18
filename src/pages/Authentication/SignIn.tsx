@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Material UI Elements
 import { 
-  Container, 
   Grid, 
   Avatar, 
   Button, 
@@ -101,7 +100,7 @@ export default function SignIn() {
 
 
   return (
-    <Container component="main" maxWidth="xs">
+    <React.Fragment>
       {Object.keys(snackbarData).length > 0 && <SnackbarAlert snackbarOptions={snackbarData} />}
 
       {/* Box section */}
@@ -156,6 +155,6 @@ export default function SignIn() {
                 </Grid>
             </Box>
         </Box>
-    </Container>
+    </React.Fragment>
   );
 }

@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Material UI elements
 import {
-    Container,
     Grid,
     Box,
     Button,
@@ -242,7 +241,7 @@ function MyAdsView() {
     }
 
     return (
-        <Container>
+        <React.Fragment>
             <Grid container spacing={3} sx={adViewStyles.mainGrid}>
                 {/* Top menu */}
                 <Grid item xl={12} lg={12} md={12}>
@@ -387,7 +386,7 @@ function MyAdsView() {
                     <NoResult page="myAds" />
                 )}
             </Grid>
-        </Container >
+        </React.Fragment >
     )
 }
 

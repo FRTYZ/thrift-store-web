@@ -7,7 +7,6 @@ import {
     Grid, 
     Box, 
     Button, 
-    Container, 
     IconButton, 
     } from "@mui/material"
 
@@ -106,7 +105,7 @@ const AdvertDetail = () => {
     return (
         <Box sx={advertDetailStyles.mainBox}>
             {advertDetail && (
-                <Container>
+                <>
                     <Breadcrumb  breadcrumbItems={breadCrumbItems} />
                     <Grid container>
                         <Grid xl={6} lg={6} md={12} sm={12} xs={12}>
@@ -235,7 +234,7 @@ const AdvertDetail = () => {
                             </Box>
                         </Grid>
                     </Grid>
-                </Container>
+                </>
             )}
         </Box>
     )

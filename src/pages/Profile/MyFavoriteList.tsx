@@ -1,12 +1,7 @@
-import { useEffect, useState, lazy, Suspense } from 'react'
+import React, { useEffect, useState, lazy, Suspense } from 'react'
 
 // Material UI elements
-import {
-    Container,
-    Grid,
-}
-    from '@mui/material'
-
+import {Grid}from '@mui/material'
 
 // Helpers
 import { Request } from '../../helpers/Request';
@@ -38,7 +33,7 @@ function MyFavoriteView() {
         getData()
     }, [])
     return (
-        <Container>
+        <React.Fragment>
             <Grid container spacing={3} sx={{ marginTop: '25px' }}>
                 <Grid item xl={12} lg={12} md={12}>
                     <ProfileTopMenu />
@@ -51,7 +46,7 @@ function MyFavoriteView() {
                     )}
                 </Grid>
             </Grid>
-        </Container>
+        </React.Fragment>
     )
 }
 
