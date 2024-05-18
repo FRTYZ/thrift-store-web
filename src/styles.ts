@@ -830,6 +830,97 @@ export const adViewStyles: Record<string, SxProps<Theme>  | undefined > = {
     }
 }
 
+// pages/Profile/ProfileEdit.tsx
+export const profileEditStyles: Record<string, SxProps<Theme>  | undefined > = {
+    mainBox: {
+        marginTop: 6
+    },
+    profileViewButtonBox: {
+        display :'grid',
+        marginTop: '5px'
+    },
+    profileViewButton: {
+        backgroundColor: '#FFFFFF',
+        color: '#25d6a2',
+        borderRadius: '50px',
+        border: '3px solid transparent',
+        outline: '#25d6a2 solid 3px',
+        textTransform: 'none',
+        marginRight: {xl: '20px', lg: '20px', md: '0px', sm:'0px', xs: '0px'}, 
+        marginBottom: '60px',
+        '&:hover': { 
+            backgroundColor: '#FFFFFF', 
+            border: '3px solid #25d6a2', 
+            color: '#25d6a2' 
+        },
+        fontWeight: 700
+    },
+
+    // Left Column
+    profileEditMainBox: {
+        border: '1px solid #e0e0e0',
+        borderRadius: '5px',
+    },
+    profileEditTitleBox: {
+        borderBottom: '1px solid #e0e0e0',
+        padding: '25px 0px 15px 25px'
+    },
+    profileEditTitle: {
+        fontSize: '20px',
+        lineHeight: '24px',
+        fontWeight: 700
+    },
+    inputMainBox: {
+        borderBottom: '1px solid #e0e0e0',
+        padding: '25px 25px 15px 25px',
+    },
+    inputBox: {
+        padding: '10px 0px 10px 0px'
+    },
+    inputTitle: {
+        fontSize: '16px',
+        lineHeight: '24px',
+        fontWeight: 700,
+        marginBottom: '20px'
+    },
+   
+    // Phone input setting
+    contactAdornment: {
+        borderRight: '1px solid #e0e0e0', 
+        paddingRight: '10px', 
+        fontSize: '12px'
+    },
+    
+    // Buttons
+    cancelButton: {
+        display: 'inline-block',
+        fontSize: '16px',
+        fontWeight: 700,
+        color: '#25d6a2',
+        marginTop: '15px',
+        borderBottom: '1px solid #25d6a2'
+    },
+    saveButtonGrid: {
+        textAlign: 'right'
+    },
+    saveButton: {
+        backgroundColor: '#25d6a2',
+        color: '#FFFFFF',
+        textTransform: 'none',
+        border: '6px solid transparent',
+        padding: '7px 5px 7px 5px',
+        fontSize: '16px',
+        marginRight: '15px',
+        marginBottom: '5px',
+        borderRadius: 15,
+        '&:hover': { 
+            bgcolor: '#FFFFFF', 
+            border: '6px solid #25d6a2', 
+            color: '#25d6a2' 
+        },
+    }
+}
+
 // component/common/NoResult.tsx
 export const noResultStyles: Record<string, SxProps<Theme>  | undefined > = {
     searchBox:{
@@ -888,6 +979,8 @@ export const noResultStyles: Record<string, SxProps<Theme>  | undefined > = {
         marginTop: '20px',
         '&:hover': { bgcolor: '#25d6a2', border: '6px solid #25d6a2', color: '#FFFFFF' },
     }
+}
+
 // component/common/Breadcrumb.tsx
 export const breadcrumbStyles = {
     breadcrumbs: {

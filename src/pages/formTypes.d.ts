@@ -1,3 +1,11 @@
+export interface ProfileEditTypes {
+    fullname?: string,
+    about?: string,
+    phoneNumber?: string,
+    email?: string,
+    photo?: File[]
+}
+
 export interface PostAdvertTypes {
     title?: string,
     description?: string,
