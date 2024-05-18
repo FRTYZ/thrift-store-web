@@ -61,12 +61,6 @@ export interface DetailCardTypes {
     photo?: DetailCardTypes
 }
 
-export interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    value: number;
-}
-
 export interface StatusProps {
     id?: string,
     value?: string 

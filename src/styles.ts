@@ -320,6 +320,78 @@ export const searchStyles: Record<string, SxProps<Theme> | undefined> = {
     }
 }
 
+// components/Layout/SubNavbar.tsx
+export const subNavbarStyles: Record<string, SxProps<Theme> | undefined> = {
+    appBar: {
+        bgcolor: 'hsla(0,0%,100%,.87)', 
+        boxShadow: 1,
+    },
+
+    //MOBİLE
+    mobileContainer: {
+        marginBottom: '2px',
+        paddingRight: '0px',
+        paddingLeft: '0px',
+        backgroundColor: '#3b3b3b',
+    },
+    mobileToolbar: {
+        textAlign: 'center',
+        minHeight:  '30px',
+        marginBottom: '7px',
+        display: {
+            xl: 'none',
+            lg: 'none',
+            md: 'none',
+            sm: 'grid',
+            xs: 'grid'
+        }
+    },
+    allCategoryButton: {
+        color: '#fff',
+        fontSize: '14px',
+        fontWeight: 700,
+        lineHeight: '16.1px',
+        textTransform: 'uppercase',
+    },
+    mobileSubDrawerBoxTitle : {
+        p:'5px',
+    },
+    mobileSubDrawerBoxLeftIcon: {
+        float: 'left'
+    },
+    mobileSubDialogTitleClose: {
+        fontSize: '2rem' 
+    },
+    leftCategoryTabs: {
+        borderRight: 1, 
+        borderColor: 'divider'
+    },
+    leftCategoryTab: {
+        justifyContent: 'flex-start',
+        '&.Mui-selected': {
+            color: '#2c2c2c',
+            backgroundColor: '#e0e0e0'
+        },
+        minHeight: '54px',
+        maxWidth: '100%',
+        border: '1px solid #e0e0e0'
+    },
+    rightCategoryListItem: {
+        padding: 0,
+        display: 'contents'
+    },
+    rightCategoryListItemButton: {
+        padding: '0', 
+        border: '1px solid #e0e0e0',
+        maxWidth: '100%', 
+        minHeight: '54px'
+    },
+    rightCategoryListItemText: {
+        paddingLeft: '20px', 
+        color: '#2c2c2c' 
+    }
+}
+
 // Layout/Footer.tsx
 export const footerStyles: Record<string, SxProps<Theme> | undefined> = {
     footerMainBox: {
