@@ -67,11 +67,11 @@ export interface StatusProps {
 }
 
 export interface PostCategory {
-    category_id: string
-    category_name: string,
+    category_id?: string
+    category_name?: string,
     color?: string,
-    key_id: number,
-    sub_category: {
+    key_id?: number,
+    sub_category?: {
         main_category_id: number,
         sub_category_id: number,
         sub_category_name: string,

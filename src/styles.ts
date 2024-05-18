@@ -6,8 +6,7 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
     appBar: {
         bgcolor: '#FFFFFF', 
         boxShadow: 1,
-        marginBottom: 1,
-        borderBottom: '1px solid #25d6a2'
+        marginBottom: 0,
     },
     navContainer: {
         marginTop: '3px',
@@ -325,6 +324,7 @@ export const subNavbarStyles: Record<string, SxProps<Theme> | undefined> = {
     appBar: {
         bgcolor: 'hsla(0,0%,100%,.87)', 
         boxShadow: 1,
+        display: 'contents'
     },
 
     //MOBİLE
@@ -571,6 +571,9 @@ export const homePageStyles: Record<string, CSSProperties | SxProps<Theme>  | un
         marginBottom: '15px',
         fontSize: '24px',
         fontWeight: 200
+    },   
+}
+
 // components/AdCard.tsx
 export const adCardStyles: Record<string, SxProps<Theme> | undefined> = {
     cardLazy: {
@@ -643,6 +646,20 @@ export const adCardStyles: Record<string, SxProps<Theme> | undefined> = {
             border: '3px solid #25d6a2', 
             color: '#25d6a2' 
         },
+    }
+}
+
+// components/common/Favorite.tsx
+export const favoriteStyles: Record<string, SxProps<Theme>  | undefined > = {
+    favoriteIconButton: {
+        padding:'6px 6px 5.5px 6px', 
+        backgroundColor: '#757575'
+    },
+    favorite: {
+        color:'red', fontSize: '16px'
+    },
+    nonFavorite : {
+        color:'white', fontSize: '16px' 
     }
 }
 
