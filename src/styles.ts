@@ -650,15 +650,14 @@ export const adCardStyles: Record<string, SxProps<Theme> | undefined> = {
 
 // components/common/Favorite.tsx
 export const favoriteStyles: Record<string, SxProps<Theme>  | undefined > = {
-    favoriteIconButton: {
-        padding:'6px 6px 5.5px 6px', 
-        backgroundColor: '#757575'
+    favoriteIconButton: { 
+        backgroundColor: '#907272'
     },
     favorite: {
-        color:'red', fontSize: '16px'
+        color:'red',
     },
     nonFavorite : {
-        color:'white', fontSize: '16px' 
+        color:'white',
     }
 }
 

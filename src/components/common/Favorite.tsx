@@ -25,7 +25,7 @@ import { SnackbarAlert } from './SnackbarAlert';
 import { FavoriteTypes } from './common';
 import { snackbarOptionsProps } from './common';
 
-const Favorite: React.FC<FavoriteTypes> = ({ id, hasFavorite }) => {
+const Favorite: React.FC<FavoriteTypes> = ({ id, hasFavorite, type }) => {
     const {loginData} = useAppSelector((state) => state?.authUser);
 
     // useState
@@ -98,12 +98,26 @@ const Favorite: React.FC<FavoriteTypes> = ({ id, hasFavorite }) => {
         {Object.keys(snackbarData).length > 0 && <SnackbarAlert snackbarOptions={snackbarData} />}
         <IconButton 
             aria-label="add to favorites" 
-            onClick={() => addFavorite(id!, advertFavorite)} sx={favoriteStyles.favoriteIconButton}
+            onClick={() => addFavorite(id!, advertFavorite)} 
+            sx={{
+                padding: type == 'large' ? '12px 12px 11.5px 12px'  : '6px 6px 5.5px 6px', 
+                ...favoriteStyles.favoriteIconButton
+            }}
         >
                 {advertFavorite == true ? (
-                    <FavoriteIcon sx={favoriteStyles.favorite} />
+                    <FavoriteIcon 
+                        sx={{
+                            fontSize: type == 'large' ? '32px' : '16px',
+                            ...favoriteStyles.favorite
+                        }} 
+                    />
                 ): (
-                    <FavoriteIcon sx={favoriteStyles.nonFavorite} />
+                    <FavoriteIcon 
+                        sx={{
+                            fontSize: type == 'large' ? '32px' : '16px',
+                            ...favoriteStyles.nonFavorite
+                        }} 
+                    />
                 )}
         </IconButton>
        
