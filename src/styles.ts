@@ -63,7 +63,7 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
     },
 
     authMenuSellButton: {
-        color: '#000000',
+        color: '#fff',
         backgroundColor: '#25d6a2 ',
         borderRadius: 2,
         '&:hover': { backgroundColor: '#FFFFFF', color: '#25d6a2' },
@@ -129,7 +129,6 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
         fontSize: '2.5rem' 
     },
     
-
     // Drawer menu list area
     drawerMenuList: {
         width: '100%', 
