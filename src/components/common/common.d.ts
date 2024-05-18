@@ -50,10 +50,11 @@ export type customTextFieldProps = {
 export type customPasswordFieldProps = {
     label: string,
     name: string,
-    value: string,
+    value?: string,
     placeholder: string,
     hasError?: boolean,
     handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
+    [key: string]: any
 }
 
 export type SelectFieldProps = {

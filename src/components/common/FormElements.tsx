@@ -71,6 +71,7 @@ export const CustomPasswordField: React.FC<customPasswordFieldProps>  = ({
     placeholder, 
     hasError, 
     handleChange, 
+    ...rest
 }) => {
 
     const [showPassword, setShowPassword] = useState(false);
@@ -106,7 +107,7 @@ export const CustomPasswordField: React.FC<customPasswordFieldProps>  = ({
                       </IconButton>
                     </InputAdornment>
                 }
-                
+                {...rest}
             />
         </>       
     )
