@@ -82,16 +82,15 @@ function Sell() {
         city_id: '',
         county_id: '',
         how_status: '',
-        fullname: userData?.fullname && userData.fullname!,
         photo: []
     };
     const formik = useFormik({
         enableReinitialize: true,
         initialValues,
         onSubmit: async (values) => {
-            const {title, description, price, photo, city_id, county_id, fullname, how_status} = values;
+            const {title, description, price, photo, city_id, county_id, how_status} = values;
             
-            if(title == '' || description == '' || price == '' || county_id == '' || fullname == '' || how_status == '' || photo!.length == 0){
+            if(title == '' || description == '' || price == '' || county_id == '' || how_status == '' || photo!.length == 0){
                 setSnackbarData({
                     type: 'error',
                     message: 'You need to fill in the required fields.'

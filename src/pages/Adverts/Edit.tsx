@@ -98,7 +98,7 @@ function Sell() {
                     formdata.append('photo', image);
                 }); 
     
-              const url = "/advert/list/" + advertId;
+                const url = "/advert/list/" + advertId;
 
                 const response = await Request({
                     method: 'PUT',
@@ -126,7 +126,6 @@ function Sell() {
     })
 
                             // Functions
-
     const getData = async() => {
         const url = '/advert/list/' + advertId;
         const data: EditAdvertDetail | any = await Request({
