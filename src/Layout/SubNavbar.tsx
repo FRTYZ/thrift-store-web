@@ -171,13 +171,17 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                     <Box
                         sx={{
                             p: '25px 0px 0px 0px',
-                            maxWidth: '475px'
+                            maxWidth: {
+                                xl: '475px',
+                                lg: '320px',
+                                md: '265px'
+                            }
                         }}
                         onMouseLeave={handlePopoverClose}
                     >
                         <Grid container>
                             {Object.keys(subCategory).length > 0 && subCategory.sub_category!.map((subItem, key) => (
-                                <Grid item xl={4} lg={4} md={4} xs={4} sm={4} key={key}>
+                                <Grid item xl={4} lg={6} md={6} xs={4} sm={4} key={key}>
                                     <Box
                                         sx={{
                                             display: 'grid',
