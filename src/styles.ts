@@ -1194,3 +1194,84 @@ export const profileViewStyles: Record<string, SxProps<Theme>  | undefined > = {
         '&:hover': { bgcolor: '#FFFFFF', border: '6px solid #ff3f55', color: '#ff3f55' },
     }
 }
+
+export const privacyStyles: Record<string, SxProps<Theme>  | undefined > = {
+
+    listItemButton: {
+        p:0
+    },
+    listItemText: {
+        color:'#424242', 
+        fontSize: '16px',
+        lineHeight: '24px',
+        margin: '5px',
+        fontWeight: 400
+    },
+    listItemActiveText: {
+        color:'#424242', 
+        fontSize: '16px',
+        lineHeight: '24px',
+        margin: '5px',
+        fontWeight: 700
+    },
+    
+
+    settingsMainGrid: {
+        marginTop: 4
+    },
+    settingsLeftBox: {
+        border: '1px solid #e0e0e0',
+        borderRadius: '5px',
+        marginBottom: '25px'
+    },
+    settingsTitleGrid: {
+        borderBottom: '1px solid #e0e0e0',
+        padding: '15px 0px 15px 25px',
+    },
+    settingsTitle: {
+        fontSize: '20px',
+        lineHeight: '24px',
+        fontWeight: 700
+    },
+    settingContentGrid: {
+        borderBottom: '1px solid #e0e0e0',
+        padding: '25px 25px 25px 25px',
+    },
+    settingLeftText: {
+        fontSize: '16px', 
+        lineHeight: '24px', 
+        fontWeight: 700, 
+        marginTop: '9px'
+    },
+    settingLeftSubText: {
+        fontSize:'14px',
+        lineHeight: '20px'
+    },
+    settingRightBox: {
+        float: 'right'
+    },
+    passwordBox: {
+        marginBottom: '20px' 
+    },
+    buttonBox: {
+        marginBottom: '10px',
+        
+    },
+    saveButton: {
+        backgroundColor: '#25d6a2',
+        color: '#FFFFFF',
+        textTransform: 'none',
+        border: '6px solid transparent',
+        padding: '7px 5px 7px 5px',
+        fontSize: '16px',
+        fontWeight: 700,
+        marginRight: '15px',
+        marginTop: '10px',
+        borderRadius: 15,
+        '&:hover': { 
+            bgcolor: '#FFFFFF', 
+            border: '6px solid #25d6a2', 
+            color: '#25d6a2' 
+        },
+    },
+}

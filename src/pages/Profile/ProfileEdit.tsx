@@ -131,7 +131,7 @@ function ProfileEdit() {
                             variant="outlined"
                             sx={profileEditStyles.profileViewButton}
                         >
-                        View profile
+                            View profile
                         </Button>
                     </Box>
                 </Grid>

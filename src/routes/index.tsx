@@ -19,6 +19,9 @@ import MyFavoriteView from "../pages/Profile/MyFavoriteList";
 import ProfileEdit from "../pages/Profile/ProfileEdit";
 import ProfileView from "../pages/Profile/ProfileView";
 
+// Settings
+import Privacy from "../pages/Settings/Privacy";
+
  const publicRoutes = [
     { path: "/", component: <Home /> },
     { path: "/", exact: true, component: <Navigate to="/" />},
@@ -36,6 +39,7 @@ const authProtectedRoutes = [
     { path: "/profile/myfavorite", component: <MyFavoriteView /> },
     { path: "/editProfile/info", component: <ProfileEdit /> },
     { path: "/profile/", component: <ProfileView /> },
+    { path: "/settings/privacy", component: <Privacy /> },
 ]
 
 export { publicRoutes, authProtectedRoutes };
