@@ -17,6 +17,7 @@ import AdvertDetail from "../pages/Adverts/Detail";
 import MyAdsView from "../pages/Profile/MyAdsList";
 import MyFavoriteView from "../pages/Profile/MyFavoriteList";
 import ProfileEdit from "../pages/Profile/ProfileEdit";
+import ProfileView from "../pages/Profile/ProfileView";
 
  const publicRoutes = [
     { path: "/", component: <Home /> },
@@ -24,6 +25,7 @@ import ProfileEdit from "../pages/Profile/ProfileEdit";
     { path: "/item/:title/:itemId", component: <AdvertDetail /> },
     { path: "/sign-in", component: <SignIn />},
     { path: "/sign-up", component: <SignUp />},
+    { path: "/profile/:userId", component: <ProfileView /> },
 ]; 
 
 const authProtectedRoutes = [
@@ -33,6 +35,7 @@ const authProtectedRoutes = [
     { path: "/profile/myads", component: <MyAdsView /> },
     { path: "/profile/myfavorite", component: <MyFavoriteView /> },
     { path: "/editProfile/info", component: <ProfileEdit /> },
+    { path: "/profile/", component: <ProfileView /> },
 ]
 
 export { publicRoutes, authProtectedRoutes };
