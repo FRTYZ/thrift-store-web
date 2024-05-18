@@ -52,7 +52,7 @@ const AdvertDetail = () => {
 
     // useState area
     const [advertDetail, setAdvertDetail] = useState<DetailCardTypes>({});
-    const [advertImages, setAdvertImages] = useState<DetailCaredPhotoTypes[]>([]);
+    const [advertImages, setAdvertImages] = useState<DetailCardPhotoTypes[]>([]);
 
     // useEffect area
 
