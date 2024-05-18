@@ -110,8 +110,6 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
         setSecondPage(true)
     };
 
-    console.log(subCategory)
-
     return (
         <AppBar position="static" sx={subNavbarStyles.appBar}>
             {/* Desktop Categories */}
@@ -125,6 +123,7 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                         xs: 'none'
                     }
                 }}
+                onMouseLeave={handlePopoverClose}
             >
                 <Grid container>
                     {categories.length > 0 && categories.map((mainCategoryItem, key) => (
@@ -166,7 +165,7 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                         horizontal: 'left',
                     }}
                     onClose={handlePopoverClose}
-                    onMouseLeave={handlePopoverClose}
+                  
                 >
                     <Box
                         sx={{
