@@ -888,5 +888,30 @@ export const noResultStyles: Record<string, SxProps<Theme>  | undefined > = {
         marginTop: '20px',
         '&:hover': { bgcolor: '#25d6a2', border: '6px solid #25d6a2', color: '#FFFFFF' },
     }
+// component/common/Breadcrumb.tsx
+export const breadcrumbStyles = {
+    breadcrumbs: {
+        fontSize :'12px', 
+        marginTop: '10px',
+        marginBottom: '10px',
+        lineHeight: '15px'
+    },
+    seperatorStyle: {
+        color: '#25d6a2'
+    },
+    links: {
+        textDecoration: 'none', 
+        color: 'inherit',
+    }
+}
+
+// pages/Adverts/Detail.tsx
+export const advertDetailCarouselStyles = {
+    carouselImg: {
+        maxHeight: '400px', 
+        width: 'auto', 
+        height: '100%' 
+    }
+}
 
 }

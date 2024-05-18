@@ -9,6 +9,32 @@ export type snackBarProps = {
 }
 
 
+// AdCard
+export type AdCardProps = {
+    data: CardTypes[];
+    grid: number[];
+}
+
+// Favorite
+export interface FavoriteTypes {
+    id?: string,
+    hasFavorite?: boolean,
+    type?: string
+}
+
+// NoResult
+export type NoResultProps = {
+    page: string;
+}
+
+// Breadcrumb
+export type BreadcrumbProps = {
+    breadcrumbItems?: { 
+        title?: string,
+        link?: string
+    }[]
+}
+
 // Form Elements Types
 export type customTextFieldProps = {
     type: string,
@@ -75,23 +101,4 @@ export type OldFileInputProps = {
     handleFormik: any,
     setDeleteState: any,
     currentValue: any[]
-}
-
-
-// AdCard
-
-export type AdCardProps = {
-    data: CardTypes[];
-    grid: number[];
-}
-
-// Favorite
-export interface FavoriteTypes {
-    id?: string,
-    hasFavorite?: boolean,
-}
-
-// NoResult
-export type NoResultProps = {
-    page: string;
 }
