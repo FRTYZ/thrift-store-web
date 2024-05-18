@@ -82,7 +82,6 @@ export type FileUploadInputProps = {
     name: string,
     oldFileName: string,
     type: string,
-    setAlert: React.Dispatch<React.SetStateAction<snackbarOptionsProps>>,
     handleFormik: any,
     [key: string]: any
 }
@@ -99,6 +98,6 @@ export type OldFileInputProps = {
     value: any[],
     type: string,
     handleFormik: any,
-    setDeleteState: any,
+    setDeleteState: React.Dispatch<React.SetStateAction<FileProps[]>>,
     currentValue: any[]
 }

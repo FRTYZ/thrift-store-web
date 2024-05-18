@@ -138,7 +138,7 @@ export const CustomSelectField: React.FC<SelectFieldProps> = ({label, name, valu
     )
 }
 
-export const FileUploadInput: React.FC<FileUploadInputProps> = ({label, name, oldFileName, type, setAlert, handleFormik, ...rest}) => {
+export const FileUploadInput: React.FC<FileUploadInputProps> = ({label, name, oldFileName, type, handleFormik, ...rest}) => {
     const [file, setFile] = useState<File[]>([]);
 
     const handleUploadFiles = (event: React.ChangeEvent<HTMLInputElement>) => {
