@@ -1,4 +1,3 @@
-
 export interface CardTypes {
     city?: string,
     county?: string,
