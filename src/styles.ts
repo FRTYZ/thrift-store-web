@@ -9,7 +9,7 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
         marginBottom: 0,
     },
     navContainer: {
-        marginTop: '3px',
+        marginTop: '20px',
         marginBottom: '3px',
         paddingLeft: {sm : '0px'},
         paddingRight: {sm: '0px'}
