@@ -1278,7 +1278,7 @@ export const advertDetailStyles: Record<string, SxProps<Theme> | undefined> = {
         textAlign: 'right',
         height: '100%',
         borderLeft: '1px solid #ebebeb',
-        paddingRight: '30px',
+        paddingRight: '10px',
     },
 
     // Price card
