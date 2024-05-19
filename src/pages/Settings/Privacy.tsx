@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import React from 'react';
 
 // Material UI elements
 import {
-  Container,
   Grid,
   Typography,
   Box,
@@ -112,13 +111,13 @@ function Privacy() {
   })
 
   return (
-    <Container>
+    <React.Fragment>
         <Grid container spacing={3} sx={privacyStyles.settingsMainGrid}>
           {/* Profile view button */}
             <Grid item lg={4} md={4} sm={12} xs={12}>
                 <List>
                     <ListItem disablePadding>
-                        <ListItemButton sx={privacyStyles.listItemButton} onClick={() => handleRouteLeftButton(item.link!)}>
+                        <ListItemButton sx={privacyStyles.listItemButton}>
                             <Typography sx={privacyStyles.listItemActiveText}>
                                 Change your password
                             </Typography>
@@ -211,7 +210,7 @@ function Privacy() {
                 </Box>
             </Grid>
         </Grid>
-    </Container>
+    </React.Fragment>
   )
 }
 
