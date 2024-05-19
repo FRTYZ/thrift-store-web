@@ -14,7 +14,8 @@ import {
     Button,
     Typography,
     Box,
-    InputBase } from "@mui/material"
+    InputBase,
+} from "@mui/material"
 
 // Material UI Icons
 import { 
@@ -211,7 +212,7 @@ const SearchBar: React.FC<searchProps> = ({ dimension, closeFunction }) => {
                                                     <ListItemButton 
                                                         sx={searchStyles.dialogRecentSearchListItemButton}
                                                         onClick={() => handleRecentSearch(recentItem?.title)}
-                                                        >
+                                                    >
                                                         <Typography 
                                                             sx={searchStyles.dialogRecentSearchText}
                                                         >{recentItem.title}</Typography>

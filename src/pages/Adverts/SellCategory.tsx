@@ -26,7 +26,7 @@ import { useAppSelector } from '../../redux/store';
 import { setCurrentCategory, useAppDispatch } from '../../redux/store';
 
 // Interfaces and types
-import { TabPanelProps } from '../advertTypes';
+import { TabPanelProps } from '../../Layout/layout';
 
 import { Category } from '../../redux/interface';
 import { PostCategory } from '../advertTypes';
@@ -149,13 +149,13 @@ function SellCategory() {
                             </Typography>
                         )}
                         {subCategory && subCategory.map((mainItem, key) =>  (
-                            <TabPanel value={value} index={mainItem.key_id} key={key}>
+                            <TabPanel value={value} index={Number(mainItem.key_id)} key={key}>
                                  <List sx={{ padding:0 }}>
-                                     {mainItem?.sub_category.map((SubItem, key) => (
+                                     {mainItem.sub_category!.map((SubItem, key) => (
                                          <ListItem sx={homePostAdvertStyles.rightCategoryListItem} key={key}>
                                              <Link 
                                                 to="/post/attributes" 
-                                                onClick={() => handleGetPage(mainItem.category_name, SubItem.sub_category_name, SubItem.sub_category_id, SubItem.main_category_id)} 
+                                                onClick={() => handleGetPage(mainItem.category_name!, SubItem.sub_category_name, SubItem.sub_category_id, SubItem.main_category_id)} 
                                                 style={{textDecoration: 'none'}}
                                                 >
                                                  <ListItemButton sx={homePostAdvertStyles.rightCategoryListItemButton}>
