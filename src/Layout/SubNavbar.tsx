@@ -7,14 +7,12 @@ import {
     Button, 
     AppBar, 
     Toolbar, 
-    MenuItem, 
-    Container, 
-    Menu,
+    Container,
     Typography,
     List,
     ListItem,
     ListItemButton,
-    ListItemIcon,
+    ListItemAvatar,
     ListItemText,
     Avatar,
     Drawer,
@@ -221,7 +219,10 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                                     <Tab
                                         key={key}
                                         label={item.category_name}
-                                        sx={subNavbarStyles.leftCategoryTab}
+                                        sx={{                           
+                                            ...subNavbarStyles.leftCategoryTab,
+                                            borderBottom:'2px solid' + item.color, 
+                                        }}
                                         iconPosition='end'
                                         {...a11yProps(Number(item.category_id))}
                                     />
@@ -238,6 +239,13 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                                                         sx={subNavbarStyles.rightCategoryListItemButton}
                                                         onClick={() => handleSearchCategory(subCategory.category_id!, String(SubItem.sub_category_id))}
                                                     >
+                                                    <ListItemAvatar>
+                                                        <Avatar 
+                                                            alt={SubItem.sub_category_name} 
+                                                            src={SubItem.sub_category_icon} 
+                                                            sx={{ marginLeft: '10px' }}
+                                                        />
+                                                    </ListItemAvatar>
                                                         <ListItemText 
                                                             sx={subNavbarStyles.rightCategoryListItemText} 
                                                             primary={SubItem.sub_category_name} 
