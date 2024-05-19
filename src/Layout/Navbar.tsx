@@ -326,6 +326,7 @@ const Navbar: React.FC<NavbarAreaProps> = ({isLogin}) => {
                                                         <ListItem disablePadding>
                                                             <ListItemButton 
                                                                 sx={navbarStyles.drawerMenuListItemButton}
+                                                                onClick={() => handleMenuRedirect('/settings/privacy')}
                                                             >
                                                                     <ListItemIcon sx={navbarStyles.drawerMenuListItemIcon}>
                                                                         <Settings />
@@ -338,6 +339,7 @@ const Navbar: React.FC<NavbarAreaProps> = ({isLogin}) => {
                                                                 sx={navbarStyles.drawerMenuListItemButton}
                                                                 onClick={() => {
                                                                     closeMobileMenu();
+                                                                    handlelogout();
                                                                 }}
                                                             >
                                                                     <ListItemIcon sx={navbarStyles.drawerMenuListItemIcon}>
