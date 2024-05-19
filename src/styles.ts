@@ -326,6 +326,55 @@ export const subNavbarStyles: Record<string, SxProps<Theme> | undefined> = {
         display: 'contents'
     },
 
+    // Desktop
+    mainBox: {
+        display: { 
+            xl: 'block',
+            lg: 'block',
+            md: 'block',
+            sm: 'none',
+            xs: 'none'
+        }
+    },
+    mainCategoryBox: {
+        textAlign: 'center',
+        padding: '10px'
+    },
+    mainCategoryText: {
+        fontSize: '14px',
+        fontWeight: 700,
+        color: '#fff',
+        textTransform: 'uppercase'
+    },
+    // Popover
+    subMainCategoryBox: {
+        p: '25px 0px 0px 0px',
+        maxWidth: {
+            xl: '475px',
+            lg: '320px',
+            md: '265px'
+        },
+    },
+    subCategoryBox: {
+        display: 'grid',
+        padding: '15px 5px',
+        "&:hover": {
+            backgroundColor: '#f3f3f3'
+        },
+        cursor: 'pointer',
+    },
+    subCategoryAvatar: {
+        display: 'block',
+        justifyContent: 'center',
+        margin: 'auto',
+        width: '40px',
+        height: '40px'
+    },
+    subCategoryText: {
+        textAlign: 'center',
+        paddingTop: '10px'
+    },
+
     //MOBİLE
     mobileContainer: {
         marginBottom: '2px',
@@ -361,6 +410,14 @@ export const subNavbarStyles: Record<string, SxProps<Theme> | undefined> = {
     mobileSubDialogTitleClose: {
         fontSize: '2rem' 
     },
+    mobileDialogTitleText: {
+        display: 'inline-block',
+        marginTop: '8px',
+        marginLeft: '20px',
+        fontSize: '20px',
+        lineHeight: '24px',
+        fontWeight: 700
+    },
     leftCategoryTabs: {
         borderRight: 1, 
         borderColor: 'divider'
@@ -395,7 +452,8 @@ export const subNavbarStyles: Record<string, SxProps<Theme> | undefined> = {
 export const footerStyles: Record<string, SxProps<Theme> | undefined> = {
     footerMainBox: {
         marginTop: '2%',
-        padding: '40px 10px 15px 10px',
+        padding: '60px 10px 40px 10px',
+        height: '100%',
         backgroundColor: '#25d6a2',
     },
     footerHead: {
@@ -680,7 +738,8 @@ export const advertSearchStyles: Record<string, SxProps<Theme> | undefined> = {
         fontWeight: 600
     },
     leftFilterAccording: {
-        boxShadow: 'none'
+        boxShadow: 'none',
+        padding: '8px'
     },
     leftFilterAccordingSummary: {
         padding:0

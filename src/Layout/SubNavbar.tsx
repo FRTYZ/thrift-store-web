@@ -113,37 +113,19 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
     return (
         <AppBar position="static" sx={subNavbarStyles.appBar}>
             {/* Desktop Categories */}
-            <Box
-                sx={{
-                    display: {
-                        xl: 'block',
-                        lg: 'block',
-                        md: 'block',
-                        sm: 'none',
-                        xs: 'none'
-                    }
-                }}
-                onMouseLeave={handlePopoverClose}
-            >
+            <Box sx={subNavbarStyles.mainBox}>
                 <Grid container>
                     {categories.length > 0 && categories.map((mainCategoryItem, key) => (
                         <Grid item xl={3} lg={3} md={3} xs={3} sm={3}>
                             <Box
                                 sx={{
                                     backgroundColor: mainCategoryItem.color,
-                                    textAlign: 'center',
-                                    padding: '10px'
+                                    ...subNavbarStyles.mainCategoryBox
                                 }}
                                 onMouseEnter={(e) => handlePopoverOpen(e, key)}
-                             
                             >
-                                <Typography
-                                    sx={{
-                                        fontSize: '14px',
-                                        fontWeight: 700,
-                                        color: '#fff',
-                                        textTransform: 'uppercase'
-                                    }}
+                                <Typography 
+                                    sx={subNavbarStyles.mainCategoryText}
                                 >{mainCategoryItem.category_name}</Typography>
                             </Box>
                         </Grid>
@@ -165,49 +147,26 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                         horizontal: 'left',
                     }}
                     onClose={handlePopoverClose}
-                  
+                    onMouseLeave={handlePopoverClose}
                 >
                     <Box
-                        sx={{
-                            p: '25px 0px 0px 0px',
-                            maxWidth: {
-                                xl: '475px',
-                                lg: '320px',
-                                md: '265px'
-                            }
-                        }}
+                        sx={subNavbarStyles.subMainCategoryBox}
                         onMouseLeave={handlePopoverClose}
                     >
                         <Grid container>
                             {Object.keys(subCategory).length > 0 && subCategory.sub_category!.map((subItem, key) => (
                                 <Grid item xl={4} lg={6} md={6} xs={4} sm={4} key={key}>
                                     <Box
-                                        sx={{
-                                            display: 'grid',
-                                            padding: '15px 5px',
-                                            "&:hover": {
-                                                backgroundColor: '#f3f3f3'
-                                            },
-                                            cursor: 'pointer',
-                                        }}
+                                        sx={subNavbarStyles.subCategoryBox}
                                         onClick={() => handleSearchCategory(subCategory.category_id!, String(subItem.sub_category_id))}
                                     >
                                         <Avatar
                                             alt={subItem.sub_category_name}
                                             src={subItem.sub_category_icon}
-                                            sx={{
-                                                display: 'block',
-                                                justifyContent: 'center',
-                                                margin: 'auto',
-                                                width: '40px',
-                                                height: '40px'
-                                            }}
+                                            sx={subNavbarStyles.subCategoryAvatar}
                                         ></Avatar>
                                         <Typography
-                                            sx={{
-                                                textAlign: 'center',
-                                                paddingTop: '10px'
-                                            }}
+                                            sx={subNavbarStyles.subCategoryText}
                                         >{subItem.sub_category_name}</Typography>
                                     </Box>
                                 </Grid>
@@ -246,14 +205,7 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                             <IconButton onClick={closeAllMobileCategory} sx={subNavbarStyles.mobileSubDrawerBoxLeftIcon}>
                                 <ArrowBack sx={subNavbarStyles.mobileSubDialogTitleClose} />
                             </IconButton>
-                                <Typography sx={{
-                                    display: 'inline-block',
-                                    marginTop: '8px',
-                                    marginLeft: '20px',
-                                    fontSize: '20px',
-                                    lineHeight: '24px',
-                                    fontWeight: 700
-                                }}>All Categories</Typography>
+                                <Typography sx={subNavbarStyles.mobileDialogTitleText}>All Categories</Typography>
                         </Box>
                         {/* Main categories section */}
                         {!secondPage && (
@@ -277,24 +229,26 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                             </Tabs>
                         )}
                         {/* Sub categories section */}
-                        <TabPanel value={value} index={Number(subCategory.key_id)} key={subCategory.key_id}>
-                                <List sx={{ padding:0 }}>
-                                    {Object.keys(subCategory).length > 0 && subCategory.sub_category!.map((SubItem, key) => (
-                                        <ListItem sx={subNavbarStyles.rightCategoryListItem} key={key}>
-                                                <ListItemButton
-                                                    sx={subNavbarStyles.rightCategoryListItemButton}
-                                                    onClick={() => handleSearchCategory(subCategory.category_id!, String(SubItem.sub_category_id))}
-                                                >
-                                                    <ListItemText 
-                                                        sx={subNavbarStyles.rightCategoryListItemText} 
-                                                        primary={SubItem.sub_category_name} 
-                                                    />
-                                                </ListItemButton>
-                                        </ListItem>
-                                        
-                                    ))}
-                                </List>
-                        </TabPanel>
+                        {secondPage && (
+                            <TabPanel value={value} index={Number(subCategory.key_id)} key={subCategory.key_id}>
+                                    <List sx={{ padding:0 }}>
+                                        {Object.keys(subCategory).length > 0 && subCategory.sub_category!.map((SubItem, key) => (
+                                            <ListItem sx={subNavbarStyles.rightCategoryListItem} key={key}>
+                                                    <ListItemButton
+                                                        sx={subNavbarStyles.rightCategoryListItemButton}
+                                                        onClick={() => handleSearchCategory(subCategory.category_id!, String(SubItem.sub_category_id))}
+                                                    >
+                                                        <ListItemText 
+                                                            sx={subNavbarStyles.rightCategoryListItemText} 
+                                                            primary={SubItem.sub_category_name} 
+                                                        />
+                                                    </ListItemButton>
+                                            </ListItem>
+                                            
+                                        ))}
+                                    </List>
+                            </TabPanel>
+                        )}
                     </Drawer>
                 </Toolbar>
             </Container>
