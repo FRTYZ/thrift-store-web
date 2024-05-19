@@ -100,21 +100,37 @@ const Favorite: React.FC<FavoriteTypes> = ({ id, hasFavorite, type }) => {
             aria-label="add to favorites" 
             onClick={() => addFavorite(id!, advertFavorite)} 
             sx={{
-                padding: type == 'large' ? '12px 12px 11.5px 12px'  : '6px 6px 5.5px 6px', 
+                padding: {
+                    lg: type == 'large' ? '12px 12px 11.5px 12px'  : '6px 6px 5.5px 6px', 
+                    md: type == 'large' ? '12px 12px 11.5px 12px'  : '6px 6px 5.5px 6px', 
+                    sm: type == 'large' ? '8px 8px 6.5px 8px'  : '6px 6px 5.5px 6px', 
+                    xs: type == 'large' ? '8px 8px 6.5px 8px'  : '6px 6px 5.5px 6px', 
+                },
+                textAlign: 'center',
                 ...favoriteStyles.favoriteIconButton
             }}
         >
                 {advertFavorite == true ? (
                     <FavoriteIcon 
                         sx={{
-                            fontSize: type == 'large' ? '32px' : '16px',
+                            fontSize: {
+                                lg: type == 'large' ? '32px' : '16px',
+                                md: type == 'large' ? '32px' : '16px',
+                                sm: type == 'large' ? '24px' : '16px',
+                                xs: type == 'large' ? '24px' : '16px'
+                            },
                             ...favoriteStyles.favorite
                         }} 
                     />
                 ): (
                     <FavoriteIcon 
                         sx={{
-                            fontSize: type == 'large' ? '32px' : '16px',
+                            fontSize: {
+                                lg: type == 'large' ? '32px' : '16px',
+                                md: type == 'large' ? '32px' : '16px',
+                                sm: type == 'large' ? '24px' : '16px',
+                                xs: type == 'large' ? '24px' : '16px'
+                            },
                             ...favoriteStyles.nonFavorite
                         }} 
                     />
