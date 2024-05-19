@@ -1,6 +1,6 @@
 import { configureStore, createSlice, Middleware } from '@reduxjs/toolkit';
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux'
-import { MenuState, AuthUserState, CurrentCategoryState, RecentSearch, searchDrawerState } from './interface';
+import { MenuState, AuthUserState, CurrentCategoryState, RecentSearch } from './interface';
 
   
 //  Creating loginSlice and defining reducer
@@ -61,21 +61,12 @@ const searchSlice = createSlice({
   },
 });
 
-const searchDrawerSlice = createSlice({
-  name: 'searchDrawer',
-  initialState: {} as searchDrawerState,
-  reducers: {
-    setSearchDrawer: (state, action) => {
-      state.searchDrawer = action.payload;
-    },
-  },
-});
+
 
 export const { setLoginData } = loginSlice.actions;
 export const { setMenuData } = menuSlice.actions;
 export const { setCurrentCategory } = currentCategorySlice.actions;
 export const { setSearchData } = searchSlice.actions;
-export const { setSearchDrawer } = searchDrawerSlice.actions;
 
 // Creating rootReducer and merging all reducers
 const rootReducer = {
@@ -83,7 +74,6 @@ const rootReducer = {
     Menu: menuSlice.reducer,
     currentCategory: currentCategorySlice.reducer,
     search: searchSlice.reducer,
-    searchDrawer: searchDrawerSlice.reducer,
 };
 
 // Create redux middleware

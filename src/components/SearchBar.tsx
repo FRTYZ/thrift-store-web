@@ -9,8 +9,6 @@ import {
     Select, 
     List,
     ListItem,
-    ListItemIcon,
-    ListItemText,
     ListItemButton,
     Container,
     Button,
@@ -20,8 +18,7 @@ import {
 
 // Material UI Icons
 import { 
-    SearchOutlined, 
-    LocationOn,
+    SearchOutlined,
     Search as SearchIcon,
 } from '@mui/icons-material';
 
@@ -32,7 +29,7 @@ import { searchStyles } from '../styles';
 import { RequestPublic } from '../helpers/Request';
 
 // Redux
-import store, {useAppSelector, useAppDispatch, setSearchData, setSearchDrawer} from '../redux/store';
+import {useAppSelector, useAppDispatch, setSearchData} from '../redux/store';
 
 
 // other
@@ -48,7 +45,7 @@ import {
 
 import { CountiesProps } from '../pages/advertTypes';
 
-const SearchBar: React.FC<searchProps> = ({ dimension }) => {
+const SearchBar: React.FC<searchProps> = ({ dimension, closeFunction }) => {
     // Component Setting
     const locationSelectGrid = dimension == 'desktop' ? [4,4,4,4] : [4,4,12,12];
     const searchInputGrid =  dimension == 'desktop' ? [8,8,12,12] : [8,8,12,12];
@@ -56,7 +53,7 @@ const SearchBar: React.FC<searchProps> = ({ dimension }) => {
     // Redux
     const dispatch = useAppDispatch();
     const {searchData} = useAppSelector((state) => state?.search);
-    const searchDrawer = store.getState().searchDrawer?.searchDrawer;
+
 
     // React Router
     const navigate = useNavigate();
@@ -107,7 +104,7 @@ const SearchBar: React.FC<searchProps> = ({ dimension }) => {
                     date: Date.now()
                 }]
                 dispatch(setSearchData(searchData))
-                handleTurnSearchDrawer()
+                closeFunction()
                 
                 const category = searchParams.get('category')
                 if(category !== null){
@@ -120,16 +117,9 @@ const SearchBar: React.FC<searchProps> = ({ dimension }) => {
         }
     })
 
-    /*
-        turns on and off the search grid
-    */
-    const handleTurnSearchDrawer = () => {
-        dispatch(setSearchDrawer(!searchDrawer));
-    }
-
     const handleRecentSearch = (search: string) => {
         const searchFilter = slugify(search);
-        handleTurnSearchDrawer()
+        closeFunction()
         navigate('/search?location=' + cityId + '&q='  + searchFilter);
     }
 

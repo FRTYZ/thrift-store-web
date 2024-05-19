@@ -59,8 +59,3 @@ export interface Search {
 export interface RecentSearch {
     searchData: Search[]
 }
-
-// search modal
-export interface searchDrawerState {
-    searchDrawer?: boolean;
-}

@@ -1,5 +1,6 @@
 export type searchProps = {
-    dimension: string
+    dimension: string,
+    closeFunction: () => void,
 }
 
 export interface searchFormTypes {

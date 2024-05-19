@@ -184,8 +184,8 @@ export const navbarStyles: Record<string, SxProps<Theme> | undefined> = {
     },
     drawerRegisterButton: {
         borderRadius: 5,
-        backgroundColor: '#FFE800',
-        color: '#000000',
+        backgroundColor: '#25d6a2',
+        color: '#fff',
         textTransform: 'none',
         marginTop: '20px',
         padding: '10px'

@@ -10,7 +10,6 @@ import {
   IconButton, 
   MenuItem, 
   Container, 
-  Paper, 
   Drawer, 
   Menu, 
   Tooltip, 
@@ -22,21 +21,13 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  InputBase,
   Typography } from "@mui/material"
 
 // Material UI Icons
 import { 
-  SearchOutlined, 
-  LocationOn, 
   Sell,
   Close, 
   Favorite, 
-  Message, 
-  Help, 
-  Face2,
-  Sms, 
-  Notifications,
   ExpandMore,
   Logout, 
   ArrowBack,
@@ -172,7 +163,7 @@ const Navbar: React.FC<NavbarAreaProps> = ({isLogin}) => {
                                 <img src={Logo} width={'160'} height={'34'} />
                             </IconButton>
                         </Link>
-                        <SearchBar dimension={'desktop'} />
+                        <SearchBar dimension={'desktop'} closeFunction={closeSearchDiv} />
                         <Box sx={navbarStyles.rightButtonsGrid}>
                                 <Box>
                                     <Box sx={navbarStyles.rightLoginButtonGrid}>
@@ -333,17 +324,6 @@ const Navbar: React.FC<NavbarAreaProps> = ({isLogin}) => {
                                                         </ListItem>
                                                         <Divider />
                                                         <ListItem disablePadding>
-                                                            <ListItemButton
-                                                                sx={navbarStyles.drawerMenuListItemButton}
-                                                                onClick={() => handleMenuRedirect('/profile/settings')}
-                                                            >
-                                                                    <ListItemIcon sx={navbarStyles.drawerMenuListItemIcon}>
-                                                                        <Help />
-                                                                    </ListItemIcon>
-                                                                <ListItemText primary="Help" />
-                                                            </ListItemButton>
-                                                        </ListItem>
-                                                        <ListItem disablePadding>
                                                             <ListItemButton 
                                                                 sx={navbarStyles.drawerMenuListItemButton}
                                                             >
@@ -377,6 +357,7 @@ const Navbar: React.FC<NavbarAreaProps> = ({isLogin}) => {
                                                                         color="error" 
                                                                         size='large'
                                                                         sx={navbarStyles.drawerAuthLoginButton}
+                                                                        onClick={() => handleMenuRedirect('/sign-in')}
                                                                     >Sign in</Button>
                                                                 </Box>
                                                             </Grid>
@@ -387,6 +368,7 @@ const Navbar: React.FC<NavbarAreaProps> = ({isLogin}) => {
                                                                         color="error" 
                                                                         size='large'
                                                                         sx={navbarStyles.drawerRegisterButton}
+                                                                        onClick={() => handleMenuRedirect('/sign-up')}
                                                                     >Sign up</Button>
                                                                 </Box>
                                                             </Grid>
@@ -438,7 +420,7 @@ const Navbar: React.FC<NavbarAreaProps> = ({isLogin}) => {
                                         </IconButton>
                                     </Box>
                                     <Box sx={searchStyles.dialogContent}>
-                                        <SearchBar dimension='mobile'/>
+                                        <SearchBar dimension='mobile' closeFunction={closeSearchDiv} />
                                     </Box>
                                 </Drawer>
                             </Grid>
