@@ -1322,22 +1322,22 @@ export const advertDetailStyles: Record<string, SxProps<Theme> | undefined> = {
         padding: '12px 5px 4px 4px'
     },
     rightColumnInfoTitle: {
-        fontSize: '28px', 
+        fontSize: 'clamp(24px, 4vw, 28px)', 
         lineHeight: '30px', 
         fontWeight: 400, 
         color: '#2c2c2c'
     },
     rightColumnInfoText: {
-        fontSize: '22px',
+        fontSize: 'clamp(18px, 4vw, 22px)', 
         lineHeight: '30px', 
         color: '#949494',
         marginTop: '10px'
     },
     rightColumnInfoIconsBox: {
-        textAlign: 'right',
+        textAlign: 'center',
         height: '100%',
         borderLeft: '1px solid #ebebeb',
-        paddingRight: '10px',
+        paddingLeft: '10px',
     },
 
     // Price card
@@ -1345,7 +1345,7 @@ export const advertDetailStyles: Record<string, SxProps<Theme> | undefined> = {
         padding: '22px 5px 22px 4px'
     },
     rightColumnPriceText: {
-        fontSize: '40px',
+        fontSize: 'clamp(30px, 4vw, 40px)', 
         lineHeight: '40px',
         fontWeight: 700
     },
@@ -1358,14 +1358,20 @@ export const advertDetailStyles: Record<string, SxProps<Theme> | undefined> = {
         backgroundColor: '#25d6a2 ',
         borderRadius: '3px',
         '&:hover': { backgroundColor: '#FFFFFF', color: '#25d6a2' },
-        padding: '20px 5px',
+        padding: {
+            lg: '20px 5px',
+            md: '20px 5px',
+            sm: '15px 4px',
+            xs: '15px 5px',
+        },
         margin: '0 0 0 6px',
         width: '140px'
     },
     rightBuyButtonText: {
         fontWeight: '500', 
         textTransform: 'none',
-        fontSize: '18px'
+        fontSize: 'clamp(14px, 4vw, 18px)',
+        
     },
 
     // Seller card
