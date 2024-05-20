@@ -59,8 +59,6 @@ function ProfileEdit() {
       onSubmit: async (values) => {
         const { fullname, about, phoneNumber, email, photo } = values;
 
-        console.log(values)
-
         if(fullname == '' || email == ''){
             Swal.fire({
               position: "center",
@@ -74,7 +72,7 @@ function ProfileEdit() {
             const formdata: FormData = new FormData();
             formdata.append('fullname', fullname!);
             about !== '' && formdata.append('about', about!);
-            phoneNumber !== '' && formdata.append('phone_number', phoneNumber!);
+            phoneNumber !== null && formdata.append('phone_number', phoneNumber!);
             formdata.append('email', email!);
             photo && formdata.append('photo', photo[0]);
 
@@ -195,7 +193,6 @@ function ProfileEdit() {
                                         type='text'
                                         name='about'
                                         value={formik.values.about}
-                                        hasError={Boolean(formik.values.about == '' && formik.touched.about)}
                                         placeholder='About [Optional]'
                                         handleChange={formik.handleChange}
                                         size="small"
