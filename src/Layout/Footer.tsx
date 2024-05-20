@@ -10,17 +10,7 @@ import {
     Typography,
     Link,
     Box,
-    Divider
     } from '@mui/material';
-
-// Material UI icons
-import { 
-    Facebook,
-    Instagram,
-    Twitter,
-    YouTube,
-    ExpandMore
-    } from '@mui/icons-material';
 
 // Styles
 import { footerStyles } from '../styles';
@@ -109,10 +99,10 @@ const Footer = () => {
                     </Grid>
                     <Box sx={footerStyles.bottomFooterBox}>
                         <Typography sx={footerStyles.bottomFooterHeader}> 
-                           EN - The sellers and products on the site are not real.  This site is a example.
+                           EN - The sellers and products on the site are not real.  It is a project developed for hobby purposes.
                         </Typography>
                         <Typography sx={footerStyles.bottomFooterHeader}> 
-                            TR - Sitede yer alan satıcı ve ürünler gerçek değildir.  Bu site örnek bir projedir.
+                            TR - Sitede yer alan satıcılar ve ürünler gerçek değildir.  Hobi amaçlı geliştirilen projedir.
                         </Typography>
                         <Link
                             href="https://github.com/FRTYZ"
