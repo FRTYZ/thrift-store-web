@@ -28,7 +28,7 @@ import { profileViewStyles } from '../../styles';
 import AdCard from '../../components/common/AdCard';
 
 // Helpers
-import { Request } from '../../helpers/Request';
+import { RequestPublic } from '../../helpers/Request';
 
 // Redux
 import store from '../../redux/store';
@@ -58,7 +58,7 @@ function ProfileView() {
         const getData = async () => {
             const userID = paramsId ? paramsId : loginData?.id;
             const url = "/account/session/" + userID;
-            const data: object[] | any  = await Request({
+            const data: object[] | any  = await RequestPublic({
                 method : 'GET',
                 url: url
             });
