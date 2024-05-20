@@ -162,7 +162,7 @@ function SellCategory() {
                                                     <ListItemAvatar>
                                                         <Avatar 
                                                             alt={SubItem.sub_category_name} 
-                                                            src={SubItem.sub_category_icon} 
+                                                            src={'./category/' + SubItem.sub_category_icon} 
                                                             sx={{ marginLeft: '10px' }}
                                                         />
                                                     </ListItemAvatar>

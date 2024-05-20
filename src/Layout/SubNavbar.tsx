@@ -159,8 +159,8 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                                         onClick={() => handleSearchCategory(subCategory.category_id!, String(subItem.sub_category_id))}
                                     >
                                         <Avatar
-                                            alt={subItem.sub_category_name}
-                                            src={subItem.sub_category_icon}
+                                            alt={subItem.sub_category_name + 1}
+                                            src={'./category/' + subItem.sub_category_icon}
                                             sx={subNavbarStyles.subCategoryAvatar}
                                         ></Avatar>
                                         <Typography
@@ -242,7 +242,7 @@ const SubNavbar: React.FC<SubNavbarAreaProps>  = ({ categories }) => {
                                                     <ListItemAvatar>
                                                         <Avatar 
                                                             alt={SubItem.sub_category_name} 
-                                                            src={SubItem.sub_category_icon} 
+                                                            src={'./category/' + SubItem.sub_category_icon} 
                                                             sx={{ marginLeft: '10px' }}
                                                         />
                                                     </ListItemAvatar>
