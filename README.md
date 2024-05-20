@@ -1,10 +1,10 @@
 # Thrift Store Web (Frontend) | PERN Stack
 
 ## Desktop
-![alt text](https://github.com/FRTYZ/thrift-store-web/main/public/home-desktop.png)
+![alt text](https://github.com/FRTYZ/thrift-store-web/blob/main/public/home-desktop.png)
 
 ## Mobile
-![alt text](https://github.com/FRTYZ/thrift-store-web/main/public/home-mobile.png)
+![alt text](https://github.com/FRTYZ/thrift-store-web/blob/main/public/home-mobile.png)
 
 ## Hello Everyone
 I developed a sample project where second-hand clothes can be sold. as a design, I resembled sites such as "www.dolap.com". in addition, it is a project where I developed my own design skills.
@@ -29,8 +29,7 @@ https://thrift-store-web.vercel.app/
 
 ## How to install
 
-* ### STEP 1: You need to install the backend side to your local
-    * [Thrift Store Backend](https://github.com/FRTYZ/thrift-store-backend)
+* ### STEP 1: You need to install the [backend side](https://github.com/FRTYZ/thrift-store-backend) to your local 
 
 * ### STEP 2: Make sure that the backend is running on port 8080.
 
