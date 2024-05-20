@@ -109,7 +109,10 @@ const Footer = () => {
                     </Grid>
                     <Box sx={footerStyles.bottomFooterBox}>
                         <Typography sx={footerStyles.bottomFooterHeader}> 
-                            This is a example and demo site
+                           EN - The sellers and products on the site are not real.  This site is a example.
+                        </Typography>
+                        <Typography sx={footerStyles.bottomFooterHeader}> 
+                            TR - Sitede yer alan satıcı ve ürünler gerçek değildir.  Bu site örnek bir projedir.
                         </Typography>
                         <Link
                             href="https://github.com/FRTYZ"
