@@ -261,7 +261,7 @@ function MyAdsView() {
                                     <Grid item xl={6} md={6} sm={12} xs={12}>
                                         <Link to={`/item/${slugify(item.title)}/${item.id}`} style={{ textDecoration: 'none' }}>
                                             <Grid container>
-                                                <Grid item xl={6} lg={6} md={6} sm={6} xs={6} sx={adViewStyles.cardTitleGrid}>
+                                                <Grid item xl={6} lg={6} md={6} sm={8} xs={8} sx={adViewStyles.cardTitleGrid}>
                                                     {item?.is_cover_image ? (
                                                         <img
                                                             src={item.is_cover_image}
@@ -281,27 +281,32 @@ function MyAdsView() {
                                                 </Grid>
                                                 <Grid item xl={4} lg={4} md={4} sm={4} xs={4}>
                                                     <Typography sx={adViewStyles.adPrice}>
-                                                        {item.price}
+                                                        {item.price} TL
                                                     </Typography>
                                                 </Grid>
-                                                <Grid item xl={2} lg={2} md={2} sm={6} xs={6}>
-                                                    {(item.is_sell) ? (
-                                                         <Button
-                                                            variant="contained"
-                                                            sx={adViewStyles.adSellStatusButton}
-                                                        >
-                                                         Sold out
-                                                     </Button>
-                                                    ): (
-                                                    <Button
-                                                        variant="contained"
-                                                        sx={adViewStyles.adStatusButton}
-                                                        disabled={!(item.is_visible)}
+                                                <Grid item xl={2} lg={2} md={2} sm={12} xs={12}>
+                                                    <Box
+                                                        sx={{
+                                                            textAlign: {sm: 'center', xs: 'center'}
+                                                        }}
                                                     >
-                                                        {item.is_visible ? 'Active' : 'Disabled'}
-                                                    </Button>
-                                                    )}
-                                                  
+                                                        {(item.is_sell) ? (
+                                                            <Button
+                                                                variant="contained"
+                                                                sx={adViewStyles.adSellStatusButton}
+                                                            >
+                                                            Sold out
+                                                        </Button>
+                                                        ): (
+                                                        <Button
+                                                            variant="contained"
+                                                            sx={adViewStyles.adStatusButton}
+                                                            disabled={!(item.is_visible)}
+                                                        >
+                                                            {item.is_visible ? 'Active' : 'Disabled'}
+                                                        </Button>
+                                                        )}
+                                                    </Box>
                                                 </Grid>
                                             </Grid>
                                         </Link>

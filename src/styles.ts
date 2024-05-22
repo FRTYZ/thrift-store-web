@@ -1017,7 +1017,12 @@ export const adViewStyles: Record<string, SxProps<Theme>  | undefined > = {
     adPrice: {
         fontSize: '14px',
         color: '#2c2c2c',
-        marginTop: '28px'
+        marginTop: {
+            lg: '28px',
+            md: '28px',
+            sm: '20px',
+            xs: '20px' 
+        }
     },
     adStatusButton: {
         backgroundColor: '#004bbe',
@@ -1058,7 +1063,18 @@ export const adViewStyles: Record<string, SxProps<Theme>  | undefined > = {
         fontSize: '14px',
         lineHeight: 1.5,
         color: '#2c2c2c',
-        marginTop: '28px'
+        marginTop: {
+            lg: '28px',
+            md: '28px',
+            sm: '0px',
+            xs: '0px'
+        },
+        textAlign: {
+            lg: 'left',
+            md: 'left',
+            sm: 'center',
+            xs: 'center'
+        }
     },
     adActionIconGrid: {
         textAlign: 'right'
