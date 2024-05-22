@@ -555,6 +555,7 @@ export const formElementsStyles: Record<string, SxProps<Theme> | undefined> = {
 export const authenticationStyles: Record<string, SxProps<Theme> | undefined> = { 
     bottomBox: {
         marginTop: 8,
+        marginBottom: 4,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
