@@ -38,13 +38,13 @@ function MyFavoriteView() {
                 <Grid item xl={12} lg={12} md={12}>
                     <ProfileTopMenu />
                 </Grid>
+                {favoriteData.length > 0 ? (
                 <Grid item xl={12} lg={12} md={12}>
-                    {favoriteData.length > 0 ? (
                        <AdCard data={favoriteData} grid={[4, 4, 4, 6]} />
-                    ) : (
-                        <NoResult page="favorite" />
-                    )}
                 </Grid>
+                ): (
+                    <NoResult page="favorite" />
+                )}
             </Grid>
         </React.Fragment>
     )
