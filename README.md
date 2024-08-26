@@ -1,10 +1,10 @@
 # Thrift Store Web (Frontend) | PERN Stack
 
 ## Desktop
-![alt text](https://github.com/FRTYZ/thrift-store-web/blob/main/public/home-desktop.png)
+![alt text](https://raw.githubusercontent.com/FRTYZ/thrift-store-web/main/public/home-desktop.png)
 
 ## Mobile
-![alt text](https://github.com/FRTYZ/thrift-store-web/blob/main/public/home-mobile.png)
+![alt text](https://raw.githubusercontent.com/FRTYZ/thrift-store-web/main/public/home-mobile.png)
 
 ## Hello Everyone
 I developed a sample project where second-hand clothes can be sold. as a design, I resembled sites such as "www.dolap.com". in addition, it is a project where I developed my own design skills.
